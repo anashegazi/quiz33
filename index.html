@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CCE4131: Distributed Systems — Master Interactive Quiz (119 Questions)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #101216;
+      color: #e2e8f0;
+      user-select: none;
+    }
+    .mono-num {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #2d3343;
+      border-radius: 9999px;
+    }
+    .btn-option {
+      transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-option:active {
+      transform: scale(0.993);
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-2{margin-bottom:0.5rem}.mb-2\.5{margin-bottom:0.625rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mt-1{margin-top:0.25rem}.mt-5{margin-top:1.25rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-2{height:0.5rem}.h-2\.5{height:0.625rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-8{height:2rem}.h-full{height:100%}.h-7{height:1.75rem}.min-h-screen{min-height:100vh}.w-16{width:4rem}.w-2\.5{width:0.625rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-8{width:2rem}.w-full{width:100%}.w-7{width:1.75rem}.max-w-4xl{max-width:56rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-reverse > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:1}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-t{border-top-width:1px}.border-\[\#2d3343\]{--tw-border-opacity:1;border-color:rgb(45 51 67 / var(--tw-border-opacity, 1))}.border-\[\#2d3343\]\/50{border-color:rgb(45 51 67 / 0.5)}.border-\[\#3b4356\]{--tw-border-opacity:1;border-color:rgb(59 67 86 / var(--tw-border-opacity, 1))}.border-amber-500\/40{border-color:rgb(245 158 11 / 0.4)}.border-cyan-500\/30{border-color:rgb(6 182 212 / 0.3)}.border-cyan-500\/40{border-color:rgb(6 182 212 / 0.4)}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-emerald-500\/40{border-color:rgb(16 185 129 / 0.4)}.border-rose-500\/30{border-color:rgb(244 63 94 / 0.3)}.border-rose-500\/40{border-color:rgb(244 63 94 / 0.4)}.bg-\[\#101216\]{--tw-bg-opacity:1;background-color:rgb(16 18 22 / var(--tw-bg-opacity, 1))}.bg-\[\#12141a\]{--tw-bg-opacity:1;background-color:rgb(18 20 26 / var(--tw-bg-opacity, 1))}.bg-\[\#1c202a\]{--tw-bg-opacity:1;background-color:rgb(28 32 42 / var(--tw-bg-opacity, 1))}.bg-\[\#252b38\]{--tw-bg-opacity:1;background-color:rgb(37 43 56 / var(--tw-bg-opacity, 1))}.bg-cyan-600{--tw-bg-opacity:1;background-color:rgb(8 145 178 / var(--tw-bg-opacity, 1))}.bg-cyan-950\/30{background-color:rgb(8 51 68 / 0.3)}.bg-cyan-950\/60{background-color:rgb(8 51 68 / 0.6)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-emerald-950\/30{background-color:rgb(2 44 34 / 0.3)}.bg-emerald-950\/80{background-color:rgb(2 44 34 / 0.8)}.bg-rose-950\/30{background-color:rgb(76 5 25 / 0.3)}.bg-rose-950\/80{background-color:rgb(76 5 25 / 0.8)}.bg-\[\#222734\]{--tw-bg-opacity:1;background-color:rgb(34 39 52 / var(--tw-bg-opacity, 1))}.bg-gradient-to-l{background-image:linear-gradient(to left, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-amber-950\/35{--tw-gradient-from:rgb(69 26 3 / 0.35) var(--tw-gradient-from-position);--tw-gradient-to:rgb(69 26 3 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-cyan-400{--tw-gradient-from:#22d3ee var(--tw-gradient-from-position);--tw-gradient-to:rgb(34 211 238 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-\[\#161922\]{--tw-gradient-to:#161922 var(--tw-gradient-to-position)}.to-emerald-400{--tw-gradient-to:#34d399 var(--tw-gradient-to-position)}.p-1\.5{padding:0.375rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.pb-1{padding-bottom:0.25rem}.pb-3{padding-bottom:0.75rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.text-right{text-align:right}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-200\/90{color:rgb(253 230 138 / 0.9)}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-neutral-300{--tw-text-opacity:1;color:rgb(212 212 212 / var(--tw-text-opacity, 1))}.text-neutral-400{--tw-text-opacity:1;color:rgb(163 163 163 / var(--tw-text-opacity, 1))}.text-neutral-500{--tw-text-opacity:1;color:rgb(115 115 115 / var(--tw-text-opacity, 1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-cyan-900\/30{--tw-shadow-color:rgb(22 78 99 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.shadow-emerald-900\/30{--tw-shadow-color:rgb(6 78 59 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:border-cyan-500\/50:hover{border-color:rgb(6 182 212 / 0.5)}.hover\:border-cyan-500\/40:hover{border-color:rgb(6 182 212 / 0.4)}.hover\:bg-\[\#252b38\]:hover{--tw-bg-opacity:1;background-color:rgb(37 43 56 / var(--tw-bg-opacity, 1))}.hover\:bg-\[\#2d3545\]:hover{--tw-bg-opacity:1;background-color:rgb(45 53 69 / var(--tw-bg-opacity, 1))}.hover\:bg-cyan-500:hover{--tw-bg-opacity:1;background-color:rgb(6 182 212 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-\[\#2b3243\]:hover{--tw-bg-opacity:1;background-color:rgb(43 50 67 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-30:disabled{opacity:0.3}.disabled\:opacity-40:disabled{opacity:0.4}@media (min-width: 640px){.sm\:h-10{height:2.5rem}.sm\:h-20{height:5rem}.sm\:w-10{width:2.5rem}.sm\:w-20{width:5rem}.sm\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.sm\:p-10{padding:2.5rem}.sm\:p-4{padding:1rem}.sm\:p-5{padding:1.25rem}.sm\:p-7{padding:1.75rem}.sm\:px-5{padding-left:1.25rem;padding-right:1.25rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}</style></head>
+<body class="min-h-screen flex flex-col justify-between bg-[#101216] p-2.5 sm:p-5 text-gray-200">
+<!-- Top Header Bar -->
+<header class="max-w-4xl w-full mx-auto pb-3">
+<div class="flex items-center justify-between text-xs sm:text-sm text-gray-400 mb-2 px-1">
+<div class="flex items-center space-x-2 space-x-reverse font-bold">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-gray-200">CCE4131: Distributed Systems — Master Quiz</span>
+</div>
+<div class="flex items-center gap-2">
+<!-- Filter by Lecture Dropdown -->
+<select class="bg-[#1c202a] text-cyan-400 border border-[#2d3343] rounded-lg px-2.5 py-1 text-xs font-bold outline-none cursor-pointer hover:border-cyan-500/50 transition" id="lectureFilter">
+<option value="ALL">جميع المحاضرات (119 سؤالاً)</option>
+<option value="LEC1">المحاضرة 1: مقدمة وأهداف (24 سؤالاً)</option>
+<option value="LEC2">المحاضرة 2: تصنيف فلين والذاكرة (25 سؤالاً)</option>
+<option value="LEC3">المحاضرة 3: التسريع وأمداهل (25 سؤالاً)</option>
+<option value="LEC4">المحاضرة 4: التخاطب والـ P2P (25 سؤالاً)</option>
+<option value="QUIZB">كويز B: ملفات د. أسماء (20 سؤالاً)</option>
+</select>
+<button class="p-1.5 rounded-lg bg-[#1c202a] hover:bg-[#252b38] border border-[#2d3343] text-gray-400 hover:text-white transition" id="resetQuizBtn" title="إعادة الكويز من البداية">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<!-- Header Stats & Segment Progress Bar -->
+<div class="bg-[#1c202a] p-3 sm:p-4 rounded-2xl border border-[#2d3343] shadow-2xl">
+<div class="flex items-center justify-between mb-2.5 text-sm">
+<!-- Question Counter -->
+<div class="font-bold tracking-wider text-gray-400 text-xs sm:text-sm mono-num">
+<span class="text-white text-base" id="currentQuestionNum">1</span> / <span id="totalQuestionsCount">119</span>
+</div>
+<div class="flex items-center gap-2">
+<!-- Wrong Counter -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-950/80 border border-rose-500/40 text-rose-400 font-bold text-xs sm:text-sm">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+<span class="mono-num" id="wrongCounter">0</span>
+</div>
+<!-- Correct Counter -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 font-bold text-xs sm:text-sm">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+<span class="mono-num" id="correctCounter">0</span>
+</div>
+</div>
+</div>
+<!-- Linear / Segmented Progress Bar -->
+<div class="w-full bg-[#12141a] h-2 rounded-full overflow-hidden border border-[#2d3343]/50 relative">
+<div class="h-full bg-gradient-to-l from-cyan-400 to-emerald-400 transition-all duration-300" id="progressBarFill" style="width: 1%"></div>
+</div>
+</div>
+</header>
+<!-- Main Quiz Container -->
+<main class="max-w-4xl w-full mx-auto flex-1 flex flex-col justify-center">
+<!-- Active Question Card -->
+<div class="bg-[#1c202a] border border-[#2d3343] rounded-2xl p-4 sm:p-7 shadow-2xl relative transition-all" id="quizCard">
+<!-- Quick Concept Capsule (💡 كبسولة الفهم قبل الحل) -->
+<div class="mb-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-amber-950/35 to-[#161922] border border-amber-500/40 shadow-inner">
+<div class="flex items-center gap-2 text-amber-400 font-bold text-xs sm:text-sm mb-1.5">
+<svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>💡 فكرة السؤال السريعة (Quick Concept):</span>
+</div>
+<p class="text-xs sm:text-sm text-amber-200/90 leading-relaxed font-medium" id="quickConceptText">التعريف الكلاسيكي لنظام التوزيع (Tanenbaum) يركز على مجموعة من الحواسيب المستقلة التي تظهر للمستخدمين كحاسوب فردي واحد متماسك (A single computer).</p>
+</div>
+<!-- Question Meta -->
+<div class="flex items-center justify-between text-xs font-bold text-neutral-400 mb-2.5">
+<span class="px-2.5 py-1 rounded-md bg-[#12141a] text-cyan-400 border border-[#2d3343]" id="topicTag">Definitions</span>
+<span class="text-neutral-400 font-medium" id="questionStepLabel">السؤال 1</span>
+</div>
+<!-- Question Text (English) -->
+<h2 class="text-sm sm:text-base font-bold text-white leading-relaxed mb-5" dir="ltr" id="questionText">1. A company replaces one large central server with several interconnected machines that cooperate, while users interact with the service as if it were one system. Which definition best describes this arrangement?</h2>
+<!-- Options Container -->
+<div class="flex flex-col gap-2.5" id="optionsContainer"><button class="btn-option w-full text-right p-3.5 sm:p-4 rounded-xl font-bold border flex items-center justify-between transition-all bg-[#222734] hover:bg-[#2b3243] border-[#2d3343] text-gray-200 hover:border-cyan-500/40"><div class="flex items-center gap-3 text-xs sm:text-sm w-full"><span class="w-7 h-7 rounded-lg bg-[#12141a] border border-[#2d3343] flex items-center justify-center font-bold text-xs text-neutral-300 mono-num shrink-0">A</span><span class="tracking-wide leading-snug font-semibold text-gray-200" dir="ltr">A collection of independent computers that appears to users as a single computer</span></div></button><button class="btn-option w-full text-right p-3.5 sm:p-4 rounded-xl font-bold border flex items-center justify-between transition-all bg-[#222734] hover:bg-[#2b3243] border-[#2d3343] text-gray-200 hover:border-cyan-500/40"><div class="flex items-center gap-3 text-xs sm:text-sm w-full"><span class="w-7 h-7 rounded-lg bg-[#12141a] border border-[#2d3343] flex items-center justify-center font-bold text-xs text-neutral-300 mono-num shrink-0">B</span><span class="tracking-wide leading-snug font-semibold text-gray-200" dir="ltr">A set of computers that must be controlled by one central processor</span></div></button><button class="btn-option w-full text-right p-3.5 sm:p-4 rounded-xl font-bold border flex items-center justify-between transition-all bg-[#222734] hover:bg-[#2b3243] border-[#2d3343] text-gray-200 hover:border-cyan-500/40"><div class="flex items-center gap-3 text-xs sm:text-sm w-full"><span class="w-7 h-7 rounded-lg bg-[#12141a] border border-[#2d3343] flex items-center justify-center font-bold text-xs text-neutral-300 mono-num shrink-0">C</span><span class="tracking-wide leading-snug font-semibold text-gray-200" dir="ltr">A collection of isolated machines that do not share resources</span></div></button><button class="btn-option w-full text-right p-3.5 sm:p-4 rounded-xl font-bold border flex items-center justify-between transition-all bg-[#222734] hover:bg-[#2b3243] border-[#2d3343] text-gray-200 hover:border-cyan-500/40"><div class="flex items-center gap-3 text-xs sm:text-sm w-full"><span class="w-7 h-7 rounded-lg bg-[#12141a] border border-[#2d3343] flex items-center justify-center font-bold text-xs text-neutral-300 mono-num shrink-0">D</span><span class="tracking-wide leading-snug font-semibold text-gray-200" dir="ltr">A single computer divided into several virtual screens</span></div></button></div>
+<!-- Explanation Box -->
+<div class="hidden mt-5 pt-4 border-t border-[#2d3343]" id="explanationContainer">
+<div class="p-3.5 sm:p-4 rounded-xl text-xs sm:text-sm leading-relaxed border transition-all" id="explanationAlert">
+<div class="flex items-center gap-2 font-bold mb-1" id="explanationTitle"></div>
+<p class="text-neutral-300" id="explanationText"></p>
+</div>
+</div>
+<!-- Navigation Actions -->
+<div class="mt-5 flex justify-between items-center gap-3">
+<!-- Previous Button -->
+<button class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-[#252b38] hover:bg-[#2d3545] border border-[#3b4356] text-gray-300 font-bold text-xs sm:text-sm tracking-wide transition flex items-center gap-1.5 disabled:opacity-30 disabled:cursor-not-allowed" disabled="" id="prevBtn">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>السؤال السابق</span>
+</button>
+<!-- Next Button -->
+<button class="px-5 py-2 sm:px-6 sm:py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs sm:text-sm tracking-wide shadow-lg shadow-cyan-900/30 transition flex items-center gap-1.5 disabled:opacity-40 disabled:cursor-not-allowed" disabled="" id="nextBtn">
+<span id="nextBtnText">السؤال التالي</span>
+<svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<!-- Final Summary View -->
+<div class="hidden bg-[#1c202a] border border-[#2d3343] rounded-2xl p-6 sm:p-10 shadow-2xl text-center" id="summaryCard">
+<div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 rounded-full flex items-center justify-center bg-cyan-950/60 border border-cyan-500/40 text-cyan-400">
+<svg class="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl sm:text-2xl font-black text-white mb-2">ممتاز! أنهيت مراجعة أسئلة الكويز بالكامل</h3>
+<p class="text-gray-400 text-xs sm:text-sm max-w-md mx-auto mb-6">لقد تدربت على الأسئلة الشاملة لجميع المحاضرات مع الشرح المعتمد لكل نقطة.</p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 max-w-lg mx-auto mb-6">
+<div class="bg-[#12141a] p-3 rounded-xl border border-[#2d3343]">
+<div class="text-xs text-gray-400">إجمالي الأسئلة</div>
+<div class="text-lg font-bold text-white mt-1 mono-num" id="finalTotal">0</div>
+</div>
+<div class="bg-emerald-950/30 p-3 rounded-xl border border-emerald-500/30">
+<div class="text-xs text-emerald-400 font-semibold">الإجابات الصحيحة</div>
+<div class="text-lg font-bold text-emerald-400 mt-1 mono-num" id="finalCorrect">0</div>
+</div>
+<div class="bg-rose-950/30 p-3 rounded-xl border border-rose-500/30">
+<div class="text-xs text-rose-400 font-semibold">الإجابات الخاطئة</div>
+<div class="text-lg font-bold text-rose-400 mt-1 mono-num" id="finalWrong">0</div>
+</div>
+<div class="bg-cyan-950/30 p-3 rounded-xl border border-cyan-500/30">
+<div class="text-xs text-cyan-400 font-semibold">النسبة المئوية</div>
+<div class="text-lg font-bold text-cyan-400 mt-1 mono-num" id="finalPercentage">0%</div>
+</div>
+</div>
+<div class="flex justify-center gap-3">
+<button class="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-900/30 transition" id="retryQuizBtn">
+          إعادة الاختبار مجدداً
+        </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="max-w-4xl w-full mx-auto text-center text-xs text-neutral-500 pt-4 pb-1">
+    Distributed Systems (CCE4131) • All Lectures Comprehensive Bank (119 Questions)
+  </footer>
+<!-- Complete 119 Questions Dataset & Interactive App Logic -->
+<script>
+    const allQuestions = [
+      // ==========================================
+      // SECTION 1: LECTURE 1 (24 Questions from lec 1 exam.pdf)
+      // ==========================================
+      {
+        lecture: "LEC1",
+        topic: "Definitions",
+        concept: "التعريف الكلاسيكي لنظام التوزيع (Tanenbaum) يركز على مجموعة من الحواسيب المستقلة التي تظهر للمستخدمين كحاسوب فردي واحد متماسك (A single computer).",
+        question: "1. A company replaces one large central server with several interconnected machines that cooperate, while users interact with the service as if it were one system. Which definition best describes this arrangement?",
+        options: [
+          { key: "A", text: "A collection of independent computers that appears to users as a single computer" },
+          { key: "B", text: "A set of computers that must be controlled by one central processor" },
+          { key: "C", text: "A collection of isolated machines that do not share resources" },
+          { key: "D", text: "A single computer divided into several virtual screens" }
+        ],
+        answer: "A",
+        explanation: "التعريف الأساسي للنظام الموزع: 'A distributed system is a collection of independent computers that appear to the users of the system as a single computer'."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Motivation: Performance",
+        concept: "تجزئة المهام الكبيرة وتنفيذها على أجهزة متعددة بالتوازي هو التطبيق المباشر لرفع الأداء (Improved performance via parallel processing).",
+        question: "2. A video-processing task is divided among several machines and executed simultaneously. Which motivation for distributed systems is most directly demonstrated?",
+        options: [
+          { key: "A", text: "Resource sharing" },
+          { key: "B", text: "Improved performance" },
+          { key: "C", text: "Openness" },
+          { key: "D", text: "Location transparency" }
+        ],
+        answer: "B",
+        explanation: "تقسيم المهام وتشغيلها بالتوازي يزيد من السرعة ويحسن الأداء (Tasks can be divided among multiple machines; parallel processing increases speed)."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Fault Tolerance",
+        concept: "استمرار النظام في تقديم خدماته عند تعطل أحد السيرفرات بسبب وجود نسخ بديلة يُعبر عن تحمل الأعطال والوثوقية (Fault tolerance and reliability / High availability).",
+        question: "3. An online service continues operating after one server crashes because other servers can still provide the service. Which benefit is being demonstrated?",
+        options: [
+          { key: "A", text: "Portability" },
+          { key: "B", text: "Vertical scalability" },
+          { key: "C", text: "Fault tolerance and reliability" },
+          { key: "D", text: "Resource migration" }
+        ],
+        answer: "C",
+        explanation: "تحمل الأعطال يعني أنه إذا فشل جهاز تستمر بقية الأجهزة في العمل بدون نقطة فشل وحيدة (No single point of failure)."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Scalability Types",
+        concept: "التوسع الأفقي (Horizontal Scalability / Scaling Out) يعني إضافة أجهزة وحواسيب جديدة إلى الشبكة بدلاً من ترقية أجهزة موجودة.",
+        question: "4. A system handles increasing demand by adding more computers to the network rather than upgrading the existing machines. This is:",
+        options: [
+          { key: "A", text: "Vertical scalability" },
+          { key: "B", text: "Geographical scalability" },
+          { key: "C", text: "Replication transparency" },
+          { key: "D", text: "Horizontal scalability" }
+        ],
+        answer: "D",
+        explanation: "إضافة أجهزة جديدة للنظام تُسمى Horizontal Scalability (Scaling Out)، بينما ترقية عتاد السيرفر نفسه تسمى Vertical Scalability."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Resource Sharing",
+        concept: "مشاركة الموارد (Resource Sharing) تتضمن استخدام نفس الأجهزة الفيزيائية كالطابعات وقواعد البيانات عبر الشبكة لتفادي تكرار التكاليف.",
+        question: "5. Which situation most clearly illustrates resource sharing as a motivation for distributed systems?",
+        options: [
+          { key: "A", text: "Several departments use the same network printer and shared database" },
+          { key: "B", text: "A computer increases its CPU clock speed" },
+          { key: "C", text: "A user changes the desktop wallpaper" },
+          { key: "D", text: "A standalone application stores all data locally" }
+        ],
+        answer: "A",
+        explanation: "مشاركة عدة أقسام لنفس الطابعة وقاعدة البيانات المشتركة عبر الشبكة هي المثال الكلاسيكي للـ Resource Sharing."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Heterogeneity",
+        concept: "دعم البيئات غير المتجانسة (Heterogeneous environments) يتيح دمج أجهزة تعمل بأنظمة تشغيل وعتاد مختلف بسلاسة عبر طبقة الـ Middleware.",
+        question: "6. A distributed system allows users to work with computers running different operating systems and hardware platforms. This capability is most closely related to:",
+        options: [
+          { key: "A", text: "Failure transparency" },
+          { key: "B", text: "Flexibility and support for heterogeneous environments" },
+          { key: "C", text: "Vertical scalability" },
+          { key: "D", text: "Concurrency transparency" }
+        ],
+        answer: "B",
+        explanation: "المرونة تعني أن أجهزة مختلفة بأنظمة تشغيل مختلفة يمكنها التوافق والعمل معاً (Supports heterogeneous environments)."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Enslow's Definition",
+        concept: "تعريف إنسلو (Enslow) يحدد أضلاع النظام الموزع الثلاثة: عتاد موزع + تحكم موزع + بيانات موزعة (Distributed HW + Distributed Control + Distributed Data).",
+        question: "7. Which statement best captures the central idea of Enslow's definition?",
+        options: [
+          { key: "A", text: "Distributed systems require one global clock" },
+          { key: "B", text: "Distributed systems consist only of distributed data" },
+          { key: "C", text: "Distributed hardware, distributed control, and distributed data together form a distributed system" },
+          { key: "D", text: "All components must be physically located in the same building" }
+        ],
+        answer: "C",
+        explanation: "معادلة إنسلو: Distributed System = Distributed Hardware + Distributed Control + Distributed Data."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Lack of Global Clock",
+        concept: "من أهم سمات النظام الموزع غياب ساعة زمنية عالمية موحدة (Lack of a global clock)، فلا يمكن الاعتماد على مرجع وقت موحد لترتيب كل الأحداث بدقة مطلقة.",
+        question: "8. In Enslow's characteristics, why is the lack of a global clock important?",
+        options: [
+          { key: "A", text: "It prevents machines from executing operations concurrently" },
+          { key: "B", text: "It guarantees that all events occur at exactly the same time" },
+          { key: "C", text: "It means every node must use the same processor" },
+          { key: "D", text: "The system cannot rely on one common time reference to order events" }
+        ],
+        answer: "D",
+        explanation: "غياب الساعة الموحدة يعني أن النظام لا يملك مرجعاً زمنياً مطلقاً مشتركاً: 'The system cannot rely on one common time reference to order events'."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Location Transparency",
+        concept: "شفافية الموقع (Location Transparency) تضمن أن المستخدم لا يحتاج لمعرفة المكان الفيزيائي أو الجغرافي للملف أو الخادم الذي يتعامل معه.",
+        question: "9. A user opens a document without needing to know whether it is stored on the local machine or a remote server. Which transparency is this?",
+        options: [
+          { key: "A", text: "Access transparency" },
+          { key: "B", text: "Location transparency" },
+          { key: "C", text: "Replication transparency" },
+          { key: "D", text: "Migration transparency" }
+        ],
+        answer: "B",
+        explanation: "Location Transparency تعني أن المستخدم لا يعرف أين يقع المورد فيزيائياً (Users do not need to know the physical location of a resource)."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Migration Transparency",
+        concept: "شفافية النقل (Migration Transparency) تتيح نقل مورد أو عملية تعمل من سيرفر لآخر دون أن يلاحظ المستخدم أو يتغير اسمه.",
+        question: "10. A service moves a running process from one machine to another, but users do not notice the move. This is an example of:",
+        options: [
+          { key: "A", text: "Concurrency transparency" },
+          { key: "B", text: "Failure transparency" },
+          { key: "C", text: "Migration transparency" },
+          { key: "D", text: "Access transparency" }
+        ],
+        answer: "C",
+        explanation: "Migration Transparency: Resources or processes can move from one machine to another without affecting users."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Replication Transparency",
+        concept: "شفافية التكرار تعني وجود نسخ مكررة متعددة من البيانات على سيرفرات مختلفة دون علم المستخدم، فهو يرى ويتعامل مع ملف منطقي واحد فقط.",
+        question: "11. A database stores several replicas of a file, but the user sees and accesses one logical file. Which goal is illustrated?",
+        options: [
+          { key: "A", text: "Replication transparency" },
+          { key: "B", text: "Location transparency" },
+          { key: "C", text: "Openness" },
+          { key: "D", text: "Vertical scalability" }
+        ],
+        answer: "A",
+        explanation: "Replication Transparency: Multiple copies of data may exist, but users see only one logical resource."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Concurrency Transparency",
+        concept: "شفافية التزامن (Concurrency Transparency) تسمح لعدة مستخدمين باستخدام المورد معاً في نفس اللحظة دون تضارب ودون شعورهم ببعضهم.",
+        question: "12. Many users access a shared resource simultaneously, and the system coordinates their access so that they do not experience conflicting operations. This is:",
+        options: [
+          { key: "A", text: "Failure transparency" },
+          { key: "B", text: "Migration transparency" },
+          { key: "C", text: "Portability" },
+          { key: "D", text: "Concurrency transparency" }
+        ],
+        answer: "D",
+        explanation: "Concurrency Transparency تضمن مشاركة المورد بين عدة مستخدمين متزامنين بدون تضارب: 'Many users can share resources at the same time without conflicts'."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Openness",
+        concept: "الانفتاحية (Openness) تعني بناء النظام بناءً على واجهات منشورة وبروتوكولات معيارية موحدة تسمح لمكونات من موردين مختلفين بالتخاطب والتكامل.",
+        question: "13. A distributed application uses published interfaces and standard protocols so that components from different vendors can communicate. Which goal does this primarily support?",
+        options: [
+          { key: "A", text: "Fault tolerance" },
+          { key: "B", text: "Openness" },
+          { key: "C", text: "Geographical scalability" },
+          { key: "D", text: "Resource duplication" }
+        ],
+        answer: "B",
+        explanation: "الانفتاحية تُعرّف بالاعتماد على Standard interfaces و Published specifications لدمج عتاد وبرمجيات مختلفة."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Portability",
+        concept: "قابلية النقل (Portability) هي إمكانية تشغيل البرمجيات على منصات وأنظمة تشغيل مختلفة بأقل قدر ممكن من التعديلات في الكود.",
+        question: "14. An application can be moved from one operating-system platform to another with only minimal changes. Which characteristic of openness is this?",
+        options: [
+          { key: "A", text: "Interoperability" },
+          { key: "B", text: "Extensibility" },
+          { key: "C", text: "Portability" },
+          { key: "D", text: "Concurrency" }
+        ],
+        answer: "C",
+        explanation: "Portability: Applications can run on different platforms with minimal changes."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Extensibility",
+        concept: "قابلية التوسيع (Extensibility) تعني إضافة ميزات أو خدمات جديدة للنظام دون تعطيل أو إيقاف الخدمات القائمة بالفعل.",
+        question: "15. A developer adds a new service to an open distributed system without disrupting existing services. Which openness characteristic is most directly involved?",
+        options: [
+          { key: "A", text: "Extensibility" },
+          { key: "B", text: "Portability" },
+          { key: "C", text: "Access transparency" },
+          { key: "D", text: "Latency" }
+        ],
+        answer: "A",
+        explanation: "Extensibility: New components or services can be added without disrupting existing ones."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Geographical Scalability",
+        concept: "التوسع الجغرافي يعني قدرة النظام على العمل بكفاءة وسرعة مقبولة عند تباعد الأجهزة عبر مدن أو قارات مختلفة.",
+        question: "16. A system is expanded from one city to multiple geographic regions while trying to maintain good performance. This is an example of:",
+        options: [
+          { key: "A", text: "Vertical scalability" },
+          { key: "B", text: "Horizontal scalability" },
+          { key: "C", text: "Replication transparency" },
+          { key: "D", text: "Geographical scalability" }
+        ],
+        answer: "D",
+        explanation: "Geographical Scalability: Expanding the system across different locations while maintaining good performance."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Vertical vs Horizontal Scalability",
+        concept: "التوسع الرأسي يزيد قوة الجهاز نفسه (RAM/CPU)، بينما التوسع الأفقي يضيف عُقداً وأجهزة جديدة إلى الشبكة.",
+        question: "17. Which option distinguishes vertical scalability from horizontal scalability correctly?",
+        options: [
+          { key: "A", text: "Vertical adds nodes; horizontal increases the power of an existing machine" },
+          { key: "B", text: "Vertical increases the resources of existing machines; horizontal adds more machines" },
+          { key: "C", text: "Both mean moving processes between machines" },
+          { key: "D", text: "Both refer only to expanding across geographic regions" }
+        ],
+        answer: "B",
+        explanation: "Vertical Scalability = ترقية الجهاز الفردي، و Horizontal Scalability = إضافة أجهزة وسيرفرات جديدة."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Latency Challenges",
+        concept: "زمن التأخير (Latency) والشبكات غير الموثوقة يسببان بطء استجابة الرسائل عبر المسافات البعيدة، وهو تحدٍ رئيسي في الأنظمة الموزعة.",
+        question: "18. A distributed application experiences slow responses because messages take a long time to travel between distant nodes. Which challenge is most directly involved?",
+        options: [
+          { key: "A", text: "Consistency" },
+          { key: "B", text: "Heterogeneity" },
+          { key: "C", text: "Latency and network issues" },
+          { key: "D", text: "Openness" }
+        ],
+        answer: "C",
+        explanation: "Latency and Network Issues: Communication delays and unreliable networks affect overall performance."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Consistency Challenges",
+        concept: "الاتساق (Consistency) يضمن أن يرى جميع المستخدمين نفس البيانات المحدثة عند تعديل أي نسخة مكررة عبر السيرفرات.",
+        question: "19. A replicated data item is updated on one machine, but users on another machine continue seeing an old value. Which challenge does this illustrate?",
+        options: [
+          { key: "A", text: "Consistency" },
+          { key: "B", text: "Portability" },
+          { key: "C", text: "Resource sharing" },
+          { key: "D", text: "Vertical scalability" }
+        ],
+        answer: "A",
+        explanation: "تحدي الاتساق (Consistency): ضمان أن يرى كل المستخدمين أحدث نسخة مطابقة في نفس الوقت حتى مع تكرار البيانات."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Concurrency Challenges",
+        concept: "الوصول المتزامن (Concurrency) لعدة مستخدمين لنفس البيان قد يسبب تضارباً وضياعاً للتعديلات إن لم يتم التحكم به والتزامن بدقة.",
+        question: "20. A system must coordinate simultaneous requests from many users who attempt to update the same resource. Which challenge is most directly relevant?",
+        options: [
+          { key: "A", text: "Geographical scalability" },
+          { key: "B", text: "Heterogeneity" },
+          { key: "C", text: "Openness" },
+          { key: "D", text: "Concurrency" }
+        ],
+        answer: "D",
+        explanation: "Concurrency Challenge: Multiple users accessing the same resources simultaneously without conflicts."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Security",
+        concept: "الأمان (Security) في النظام الموزع يعني حماية البيانات والخدمات من الهجمات والاختراقات والوصول غير المصرح به عبر قنوات الشبكة المفتوحة.",
+        question: "21. A distributed service must protect its data and operations from unauthorized access and attacks. Which challenge is this?",
+        options: [
+          { key: "A", text: "Latency" },
+          { key: "B", text: "Security" },
+          { key: "C", text: "Migration transparency" },
+          { key: "D", text: "Resource sharing" }
+        ],
+        answer: "B",
+        explanation: "Security Challenge: Protecting data and services from unauthorized access, attacks, and data breaches."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Heterogeneity Challenges",
+        concept: "عدم التجانس (Heterogeneity) ينتج عن اختلاف لغات البرمجة والعتاد وأنظمة التشغيل وبروتوكولات الشبكة المستخدمة بين الأجهزة.",
+        question: "22. A system combines different hardware architectures, operating systems, programming languages, and network technologies. What challenge must it address?",
+        options: [
+          { key: "A", text: "Consistency" },
+          { key: "B", text: "Fault tolerance" },
+          { key: "C", text: "Heterogeneity" },
+          { key: "D", text: "Replication transparency" }
+        ],
+        answer: "C",
+        explanation: "Heterogeneity: Different hardware, operating systems, programming languages, and networks must work together."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Fault Tolerance",
+        concept: "تحمل الأعطال يتطلب أن تستمر المنظومة في أداء وظائفها حتى عند انقطاع كابل شبكة أو سقوط عُقدة كاملة.",
+        question: "23. A network link fails, making one node unreachable, but the rest of the system should continue providing its services. Which challenge is most directly addressed?",
+        options: [
+          { key: "A", text: "Fault tolerance" },
+          { key: "B", text: "Portability" },
+          { key: "C", text: "Interoperability" },
+          { key: "D", text: "Vertical scalability" }
+        ],
+        answer: "A",
+        explanation: "Fault Tolerance: Failures can occur at any time; the system must continue to operate even if some components fail."
+      },
+      {
+        lecture: "LEC1",
+        topic: "Centralization Limitations",
+        concept: "المركزية المفرطة تؤدي إلى تراكم الأحمال على نقطة واحدة واختناقها وتأخير المعالجة، بينما التوزيع يماثل توازن الطبيعة في توزيع المهام.",
+        question: "24. Which statement best explains why excessive centralization can be inefficient, as discussed in the lecture's nature analogy?",
+        options: [
+          { key: "A", text: "Centralization always increases parallelism" },
+          { key: "B", text: "Centralized systems cannot store data" },
+          { key: "C", text: "Distribution eliminates the need for coordination" },
+          { key: "D", text: "A single unit may become overloaded, causing delays and inefficiency" }
+        ],
+        answer: "D",
+        explanation: "المحاضرة توضح: 'Excessive centralization leads to overload, delay, and inefficiency'."
+      },
+
+      // ==========================================
+      // SECTION 2: LECTURE 2 (25 Questions from lec 2 exam.pdf)
+      // ==========================================
+      {
+        lecture: "LEC2",
+        topic: "Flynn's Taxonomy: SISD",
+        concept: "الحاسوب التقليدي أحادي المعالج الذي ينفذ تعليمات تسلسلية ويتصل بالذاكرة عبر ممر ناقل واحد يُصنف كـ SISD (Single Instruction, Single Data).",
+        question: "25. A conventional computer has one processor that executes instructions sequentially, with communication to memory through a bus. Which Flynn category best describes it?",
+        options: [
+          { key: "A", text: "SIMD" },
+          { key: "B", text: "MIMD" },
+          { key: "C", text: "SISD" },
+          { key: "D", text: "MISD" }
+        ],
+        answer: "C",
+        explanation: "معمارية SISD تمثل أجهزة المعالج الأحادي الكلاسيكية (Von Neumann machines) التي تعالج تعليمة واحدة على بيان واحد."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Flynn's Taxonomy: SIMD",
+        concept: "تنفيذ نفس التعليمة في نفس اللحظة عبر عدة معالجات ولكن على عناصر بيانات مختلفة من مصفوفة يُعد تطبيقاً لمعمارية SIMD.",
+        question: "26. A system contains eight processing elements. At a given clock tick, all active elements execute the same instruction, but each operates on a different array element. This is an example of:",
+        options: [
+          { key: "A", text: "SIMD" },
+          { key: "B", text: "MISD" },
+          { key: "C", text: "SISD" },
+          { key: "D", text: "MIMD" }
+        ],
+        answer: "A",
+        explanation: "SIMD = Single Instruction Multiple Data؛ تعليمة واحدة صادرة من وحدة التحكم المركزية تنفذها كل المعالجات على بيانات مختلفة."
+      },
+      {
+        lecture: "LEC2",
+        topic: "MIMD vs SIMD",
+        concept: "الفارق الرئيسي هو أن معالجات MIMD تستطيع تنفيذ برامج وتعليمات مختلفة تماماً على بيانات مختلفة وبشكل غير متزامن.",
+        question: "27. Which statement best distinguishes MIMD from SIMD?",
+        options: [
+          { key: "A", text: "MIMD requires a single global clock for all processors" },
+          { key: "B", text: "MIMD processors can execute different instruction streams on different data" },
+          { key: "C", text: "MIMD uses one instruction stream and one data stream" },
+          { key: "D", text: "MIMD processors must all execute the same operation simultaneously" }
+        ],
+        answer: "B",
+        explanation: "معالجات MIMD تمتلك وحدات تحكم مستقلة تمكنها من تنفيذ تدفقات تعليمات مختلفة على بيانات مختلفة دون التقيد بساعة متزامنة واحدة."
+      },
+      {
+        lecture: "LEC2",
+        topic: "SISD Summation Complexity",
+        concept: "لجمع N من الأرقام على حاسوب SISD، يتطلب الأمر N قراءة للذاكرة و N-1 عملية جمع تسلسلية، مما يستغرق زمناً قدره O(N).",
+        question: "28. A program sums N numbers on a basic SISD machine. According to the lecture, which description is correct?",
+        options: [
+          { key: "A", text: "N additions are performed in parallel" },
+          { key: "B", text: "The work requires O(log N) sequential operations" },
+          { key: "C", text: "There are N-1 additions, executed sequentially, giving O(N) operations" },
+          { key: "D", text: "Only one memory access is required" }
+        ],
+        answer: "C",
+        explanation: "في SISD الجمع تسلسلي بحت: يتطلب N وصولاً للذاكرة و N-1 عملية جمع، لذا يأخذ وقتاً بتعقيد O(N)."
+      },
+      {
+        lecture: "LEC2",
+        topic: "SISD Concurrency: Multiprogramming",
+        concept: "جدولة Round Robin تُستخدم في تعدد البرامج (Multiprogramming) لمشاركة المعالج بين البرامج المختلفة عبر فترات زمنية.",
+        question: "29. In the lecture's discussion of improving concurrency in SISD systems, Round Robin scheduling is associated most directly with:",
+        options: [
+          { key: "A", text: "Multiprogramming" },
+          { key: "B", text: "Pipelining" },
+          { key: "C", text: "Parallel functional units" },
+          { key: "D", text: "Simultaneous I/O" }
+        ],
+        answer: "A",
+        explanation: "المحاضرة تربط الـ Round Robin بتعدد البرامج (Multiprogramming) لمشاركة المعالج الأحادي بين عدة برامج بالتناوب."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Pipelining",
+        concept: "تجزئة معالجة التعليمة إلى مراحل متتالية (Fetch, Decode, Operand, Execute, Write-back) تعمل كخط تجميع متداخل يُسمى خط الأنابيب (Pipelining).",
+        question: "30. A processor overlaps instruction processing by dividing it into fetch, decode, operand-fetch, execution, and write-back stages. Which technique is being used?",
+        options: [
+          { key: "A", text: "Message passing" },
+          { key: "B", text: "Multiprogramming" },
+          { key: "C", text: "Vector processing" },
+          { key: "D", text: "Pipelining" }
+        ],
+        answer: "D",
+        explanation: "Pipelining تقنية تجزئة مراحل التعليمة إلى أجزاء متعاقبة تتداخل في التنفيذ لزيادة إنتاجية المعالج."
+      },
+      {
+        lecture: "LEC2",
+        topic: "SIMD Suitability",
+        concept: "معمارية SIMD مثالية للتطبيقات عالية الانتظام على المصفوفات، مثل تطبيق عمليات الفلاتر على بكسلات الصور في معالجات الرسوميات (GPUs).",
+        question: "31. Which workload is most naturally suited to SIMD, as described in the lecture?",
+        options: [
+          { key: "A", text: "Running unrelated applications on separate computers" },
+          { key: "B", text: "Applying the same pixel operation across an image" },
+          { key: "C", text: "Executing several unrelated algorithms on one input value" },
+          { key: "D", text: "Running one instruction on one data item at a time" }
+        ],
+        answer: "B",
+        explanation: "تناسب معمارية SIMD البيانات المنتظمة كالمصفوفات والصور؛ حيث يتم تطبيق نفس عملية البكسل على كافة عناصر الصورة بالتوازي."
+      },
+      {
+        lecture: "LEC2",
+        topic: "SIMD Control Unit",
+        concept: "وحدة التحكم (Control Unit) في SIMD هي السيد (Master) المسؤول عن فك تشفير التعليمة وبثها لكافة المعالجات التابعة (Slaves).",
+        question: "32. In the SIMD organization described, what is the primary role of the Control Unit (CU)?",
+        options: [
+          { key: "A", text: "It gives every PE a separate program to execute" },
+          { key: "B", text: "It stores each PE's private operating system" },
+          { key: "C", text: "It decodes and broadcasts instructions or common control information to the PEs" },
+          { key: "D", text: "It replaces the processing elements during computation" }
+        ],
+        answer: "C",
+        explanation: "دور الـ CU في SIMD هو فك تشفير التعليمة وبثها مع عناوين الذاكرة المشتركة إلى جميع وحدات المعالجة (PEs)."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Matrix Addition in SIMD",
+        concept: "لجمع مصفوفتين 2x2 باستخدام 4 معالجات SIMD، تبث تعليمة الجمع مرة واحدة، ويقوم كل معالج بجمع عنصرين متقابلين في خطوة واحدة فقط.",
+        question: "33. Two 2x2 matrices are added using four SIMD processing elements. Why can the four element-wise additions be carried out in parallel?",
+        options: [
+          { key: "A", text: "Each PE receives a different instruction and the same data" },
+          { key: "B", text: "Each PE adds a corresponding pair of elements under the same instruction" },
+          { key: "C", text: "The CU performs all four additions sequentially" },
+          { key: "D", text: "The matrices are first converted into a single scalar" }
+        ],
+        answer: "B",
+        explanation: "كل معالج يتلقى نفس أمر الجمع، ويطبقه على زوج العناصر المخصص له بالتوازي، فتستغرق العملية خطوة واحدة فقط."
+      },
+      {
+        lecture: "LEC2",
+        topic: "SIMD Masking (Active / Inactive)",
+        concept: "إذا كانت التعليمة مخصصة لشرط معين (مثل القيم > 10)، تُعطّل المعالجات التي لا ينطبق عليها الشرط وتنتظر التعليمة التالية (Marked inactive).",
+        question: "34. An SIMD instruction should affect only values greater than 10 in an array. What happens to processing elements assigned values that do not satisfy the condition?",
+        options: [
+          { key: "A", text: "They become separate MIMD processors" },
+          { key: "B", text: "They execute a different instruction stream" },
+          { key: "C", text: "They stop the entire system" },
+          { key: "D", text: "They are marked inactive and wait for a later instruction" }
+        ],
+        answer: "D",
+        explanation: "المعالجات التي لا تحقق الشرط تُضبط حالتها كـ Inactive وتنتظر حتى انتهاء المعالجات النشطة من تنفيذ التعليمة."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Interprocessor Communication",
+        concept: "التخاطب بين المعالجات يتم بطريقتين رئيسيتين: إما الذاكرة المشتركة (Shared memory) أو شبكة الربط وتبادل الرسائل (Message passing).",
+        question: "35. Which pair gives the two communication approaches mentioned for SIMD and MIMD systems?",
+        options: [
+          { key: "A", text: "Shared memory/shared variables, or interconnection network/message passing" },
+          { key: "B", text: "Bus scheduling, or instruction pipelining" },
+          { key: "C", text: "Global clock, or local clock only" },
+          { key: "D", text: "Multiprogramming, or simultaneous I/O" }
+        ],
+        answer: "A",
+        explanation: "المحاضرة تحدد طريقتي الاتصال صراحة: Shared Memory and Shared Variables، أو Interconnection Network and Message Passing."
+      },
+      {
+        lecture: "LEC2",
+        topic: "MISD Architecture",
+        concept: "في MISD (تعليمات متعددة على بيان واحد)، يمر نفس الرقم المدخل Z على عدة معالجات ينفذ كل منها فحصاً أو عملية مختلفة في نفس الوقت.",
+        question: "36. In the lecture's MISD prime-checking example, each processor receives the same number Z but tests a different possible divisor. This illustrates:",
+        options: [
+          { key: "A", text: "One instruction applied to many independent inputs" },
+          { key: "B", text: "Many processors executing the same program on separate numbers" },
+          { key: "C", text: "Different operations on the same input data" },
+          { key: "D", text: "A single processor executing sequential divisions" }
+        ],
+        answer: "C",
+        explanation: "MISD تعني Multiple Instruction Single Data؛ حيث تطبق عمليات مختلفة (قواسم مختلفة) على نفس البيان المدخل (Z)."
+      },
+      {
+        lecture: "LEC2",
+        topic: "MISD Commercial Status",
+        concept: "معمارية MISD العامة النظرية لا توجد لها حواسيب تجارية عامة معتمدة في السوق (No commercial machines exist with this design).",
+        question: "37. Why does the lecture describe MISD as having limited commercial use?",
+        options: [
+          { key: "A", text: "It cannot accept input data" },
+          { key: "B", text: "It requires every processor to share one instruction stream" },
+          { key: "C", text: "It is identical to SISD" },
+          { key: "D", text: "The lecture notes that commercial machines with this design are generally not available" }
+        ],
+        answer: "D",
+        explanation: "المحاضرة تذكر نصاً: 'For most applications MISD is no commercial machines exist with this design'."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Pipelining Buffers",
+        concept: "الذواكر المؤقتة (Buffers) بين مراحل خط الأنابيب تفصل بين المعالجات وتحتفظ بالخرج المؤقت حتى يصبح المعالج التالي جاهزاً لاستقباله.",
+        question: "38. In a pipeline, buffers are used mainly to:",
+        options: [
+          { key: "A", text: "Hold intermediate output temporarily until the next stage can process it" },
+          { key: "B", text: "Allow all stages to execute the same instruction on the same datum" },
+          { key: "C", text: "Replace the control unit" },
+          { key: "D", text: "Store the complete operating system of each processor" }
+        ],
+        answer: "A",
+        explanation: "تُستخدم الـ Buffers لتخزين نواتج المراحل مؤقتاً: 'Buffers are used to hold output data temporally until the next stage finishes its data execution'."
+      },
+      {
+        lecture: "LEC2",
+        topic: "MIMD Asynchronous Nature",
+        concept: "عندما يمتلك النظام N معالجات و N تدفقات تعليمات و N تدفقات بيانات تعمل بشكل غير متزامن، فهذا تعريف MIMD.",
+        question: "39. A system has N processors, N instruction streams, and N data streams. The processors may work asynchronously on different tasks. Which category is this?",
+        options: [
+          { key: "A", text: "SISD" },
+          { key: "B", text: "SIMD" },
+          { key: "C", text: "MISD" },
+          { key: "D", text: "MIMD" }
+        ],
+        answer: "D",
+        explanation: "MIMD = Multiple Instruction Multiple Data؛ كل معالج مستقل ينفذ برنامجه الخاص على بياناته الخاصة بشكل غير متزامن."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Execution Synchronization",
+        concept: "معالجات SIMD تعمل بنبضات متزامنة ومقيدة بساعة عالمية (Lockstep operation)، بينما معالجات MIMD تعمل بمرونة وبشكل غير متزامن (Asynchronous).",
+        question: "40. Which pairing is correct according to the lecture?",
+        options: [
+          { key: "A", text: "SIMD - typically asynchronous; MIMD - lockstep" },
+          { key: "B", text: "SIMD - lockstep operation; MIMD - typically asynchronous" },
+          { key: "C", text: "SISD - multiple instruction streams; MISD - multiple data streams" },
+          { key: "D", text: "MISD - shared instruction stream; MIMD - single data stream" }
+        ],
+        answer: "B",
+        explanation: "SIMD تقترن بـ Lockstep operation بساعة موحدة، بينما MIMD تقترن بـ Asynchronous execution."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Tightly Coupled Characteristics",
+        concept: "الأنظمة المترابطة بإحكام (Tightly Coupled) تعتمد على ذاكرة مشتركة وناقل عالي السرعة، مما يوفر زمناً ضئيلاً جداً للتأخير ومعدل نقل بيانات مرتفعاً.",
+        question: "41. A multiprocessor system uses shared memory and is described as tightly coupled. Which additional characteristic is most consistent with the lecture?",
+        options: [
+          { key: "A", text: "Large communication delay and low data rate" },
+          { key: "B", text: "Independent computers communicating only through messages" },
+          { key: "C", text: "Small communication delay and high data rate" },
+          { key: "D", text: "No interaction at the operating-system level" }
+        ],
+        answer: "C",
+        explanation: "في الأنظمة المترابطة بإحكام: التأخير صغير جداً (Small delay) ومعدل نقل البيانات ضخم وسريع (High data rate)."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Loosely Coupled Systems",
+        concept: "الأجهزة التي يمتلك كل منها ذاكرته ومعالجه الخاص وتتبادل البيانات عبر رسائل الشبكة تُصنف كـ Loosely Coupled Multicomputer.",
+        question: "42. A collection of computers has its own memory in each machine and exchanges data through messages over a network. The lecture classifies this arrangement as:",
+        options: [
+          { key: "A", text: "A loosely coupled multicomputer" },
+          { key: "B", text: "A tightly coupled multiprocessor" },
+          { key: "C", text: "A SISD machine" },
+          { key: "D", text: "A processor array" }
+        ],
+        answer: "A",
+        explanation: "Systems using an interconnection network with private memories are called multicomputers or loosely coupled machines."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Tightly Coupled Architecture",
+        concept: "تضم أجهزة Tightly Coupled عدة معالجات مجمعة على شاسيه واحد تشترك في الوصول لذاكرة موحدة عبر ناقل سريع وتحت إدارة نظام تشغيل واحد.",
+        question: "43. Which statement about tightly coupled systems matches the lecture most closely?",
+        options: [
+          { key: "A", text: "They communicate only through low-speed external networks" },
+          { key: "B", text: "They usually have no shared memory" },
+          { key: "C", text: "They necessarily consist of geographically distant computers" },
+          { key: "D", text: "They typically have processors organized in one system with access to common memory through a high-speed bus" }
+        ],
+        answer: "D",
+        explanation: "نص المحاضرة: 'processors are organized on a single chassis and have access to common memory through high-speed bus under control of single OS'."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Loosely Coupled Architecture",
+        concept: "في الأنظمة رخوة الترابط، تتخاطب الحواسيب عبر مستوى الإدخال/الإخراج (I/O level) بالرسائل، مما يجعل زمن التأخير كبيراً ومعدل النقل منخفضاً مقارنة بالناقل الداخلي.",
+        question: "44. Which statement best describes a loosely coupled system?",
+        options: [
+          { key: "A", text: "All processors access one physically shared memory directly" },
+          { key: "B", text: "Multiple computers communicate at the I/O level using intermachine messages, with relatively larger delay" },
+          { key: "C", text: "It must use one global clock to synchronize all instructions" },
+          { key: "D", text: "It cannot cooperate to solve a common problem" }
+        ],
+        answer: "B",
+        explanation: "سلايد 21: 'multiple computers that communicate at the I/O level through intermachine message; thus, the delay is large and the data rate is low'."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Distributed Shared Memory (DSM)",
+        concept: "الذاكرة الموزعة مادياً ولكنها مشتركة منطقياً عبر برمجيات نظام التشغيل تُسمى: Distributed Shared Memory (DSM).",
+        question: "45. A machine has physically distributed memory, but software presents the memory as one shared address space. Which cell of the lecture's physical/logical classification describes it?",
+        options: [
+          { key: "A", text: "Physically shared and logically shared" },
+          { key: "B", text: "Physically shared and logically distributed" },
+          { key: "C", text: "Physically distributed and logically shared" },
+          { key: "D", text: "Physically distributed and logically distributed" }
+        ],
+        answer: "C",
+        explanation: "الذاكرة الموزعة مادياً (Physically distributed) مع كونها مشتركة برمجياً ومنطقياً (Logically shared) هي تقنية الـ Distributed Shared Memory."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Memory Taxonomy Matrix",
+        concept: "Common memory تعني مشتركة مادياً ومنطقياً، بينما Message passing تعني موزعة مادياً ومنطقياً.",
+        question: "46. Which option correctly matches the memory arrangements in the lecture?",
+        options: [
+          { key: "A", text: "Common memory = physically shared/logically shared; message passing = physically distributed/logically distributed" },
+          { key: "B", text: "Common memory = physically distributed/logically shared; message passing = physically shared/logically shared" },
+          { key: "C", text: "Distributed shared memory = physically shared/logically distributed; common memory = physically distributed/logically distributed" },
+          { key: "D", text: "Simulated message passing = physically distributed/logically shared" }
+        ],
+        answer: "A",
+        explanation: "جدول سلايد 18: Physically shared + Logically shared = Common memory، و Physically distributed + Logically distributed = Message passing."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Simulated Message Passing",
+        concept: "عندما تكون الذاكرة مشتركة فيزيائياً ولكن النظام البرمجي يحاكي تبادل الرسائل بين المعالجات، تسمى: Simulated message passing.",
+        question: "47. A physically shared-memory system is presented to the programmer as a message-passing system. What is this called in the lecture's table?",
+        options: [
+          { key: "A", text: "Distributed shared memory" },
+          { key: "B", text: "Common memory" },
+          { key: "C", text: "Message passing" },
+          { key: "D", text: "Simulated message passing" }
+        ],
+        answer: "D",
+        explanation: "الخلية في الجدول التي تقاطع Physically shared مع Logically distributed هي Simulated message passing."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Parallel vs Distributed Work",
+        concept: "الأنظمة وثيقة الترابط تميل للعمل المتوازي لمشكلة واحدة، بينما رخوة الترابط تميل للعمل الموزع على مسائل متعددة، لكن هذه ليست قاعدة مطلقة.",
+        question: "48. Which statement about the relationship between parallel and distributed systems is supported by the lecture?",
+        options: [
+          { key: "A", text: "Tightly coupled systems are always distributed, and loosely coupled systems are never parallel" },
+          { key: "B", text: "Tightly coupled systems tend to be used for parallel work and loosely coupled systems tend to be used for distributed work, but this is not an absolute rule" },
+          { key: "C", text: "Only SISD systems can be parallel" },
+          { key: "D", text: "A cluster cannot be organized to solve one job" }
+        ],
+        answer: "B",
+        explanation: "سلايد 23: Tightly coupled تميل للعمل المتوازي لحل مشكلة واحدة، و Loosely coupled للعمل الموزع، لكن يمكن استخدام رخوة الترابط لحل مسألة واحدة أيضاً."
+      },
+      {
+        lecture: "LEC2",
+        topic: "Cluster Coordination",
+        concept: "عند تشغيل Cluster أو Grid لحل مسألة موحدة، يجب استخدام نظام تشغيل أو طبقة تنسيق تتولى توزيع المهام، وإدارة التفاعل، وضمان التزامن.",
+        question: "49. According to the lecture, what is required when a grid or cluster is organized to solve a particular problem?",
+        options: [
+          { key: "A", text: "Each processor must stop communicating with the others" },
+          { key: "B", text: "All tasks must be executed by one processor" },
+          { key: "C", text: "The processors must be organized so tasks are assigned, interaction is managed, and synchronization is ensured" },
+          { key: "D", text: "The system must convert distributed memory into a single physical memory module" }
+        ],
+        answer: "C",
+        explanation: "سلايد 23: يجب تنظيم المعالجات بواسطة نظام يدير التفاعل (Organizes interaction)، ويوزع المهام (Assigns tasks)، ويضمن التزامن (Ensures synchronization)."
+      },
+
+      // ==========================================
+      // SECTION 3: LECTURE 3 (25 Questions from lec 3 exam.pdf)
+      // ==========================================
+      {
+        lecture: "LEC3",
+        topic: "DSM Concept",
+        concept: "الذاكرة الموزعة فيزيائياً ولكنها تبدو للمبرمج كمساحة عناوين واحدة موحدة تسمى تقنية الذاكرة المشتركة الموزعة (Distributed Shared Memory).",
+        question: "50. A system has physically distributed memory, but the operating system presents it to programmers as one logically shared address space. Which organization does this describe?",
+        options: [
+          { key: "A", text: "Common memory" },
+          { key: "B", text: "Simulated message passing" },
+          { key: "C", text: "Distributed shared memory" },
+          { key: "D", text: "Message passing" }
+        ],
+        answer: "C",
+        explanation: "DSM تدمج ميزة الذاكرة الموزعة فيزيائياً مع راحة وسهولة البرمجة بمساحة عناوين منطقية مشتركة واحدة."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Tightly Coupled Metrics",
+        concept: "الأنظمة وثيقة الترابط تمتاز بناقل داخلي فائق السرعة مما يقلل زمن التأخير (Low delay) ويجعل معدل نقل البيانات كبيراً (High data rate).",
+        question: "51. Which combination is correctly associated with a conventional tightly coupled system?",
+        options: [
+          { key: "A", text: "Shared memory, low communication delay, and high data rate" },
+          { key: "B", text: "Independent memories, high delay, and low data rate" },
+          { key: "C", text: "Message passing only, with no shared-memory access" },
+          { key: "D", text: "Multiple independent operating systems with no strong interaction" }
+        ],
+        answer: "A",
+        explanation: "النظام وثيق الترابط يمتلك ذاكرة مشتركة وناقلاً سريعاً وتأخيراً قليلاً ومعدل نقل بيانات مرتفعاً."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Loosely Coupled Network",
+        concept: "تبادل الرسائل عبر وصلات الشبكة في مستوى الإدخال/الإخراج يتسم بتأخير أعلى ومعدل نقل أقل مقارنة بالناقل، وهو سمة النظام رخو الترابط.",
+        question: "52. A collection of computers communicates through intermachine messages at the I/O level. Communication delay is relatively large and data rate is relatively low. The system is most likely:",
+        options: [
+          { key: "A", text: "A common-memory multiprocessor" },
+          { key: "B", text: "A loosely coupled system" },
+          { key: "C", text: "A logically shared-memory system only" },
+          { key: "D", text: "A single-processor system" }
+        ],
+        answer: "B",
+        explanation: "السمات المذكورة (الاتصال بالرسائل، تأخير كبير، ومعدل نقل أقل) تصف تماماً النظام رخو الترابط (Loosely coupled system)."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Coupling Dynamics",
+        concept: "تميل الأنظمة المترابطة بإحكام للعمل المتوازي لمشكلة واحدة، بينما الأنظمة رخوة الترابط تميل للعمل الموزع على مسائل متعددة، مع إمكانية استخدام كلاهما للآخر.",
+        question: "53. Which statement about tightly and loosely coupled systems is MOST accurate according to the lecture?",
+        options: [
+          { key: "A", text: "Tightly coupled systems are always distributed systems and loosely coupled systems are never parallel" },
+          { key: "B", text: "Both types must use physically shared memory" },
+          { key: "C", text: "Loosely coupled systems cannot cooperate on one problem" },
+          { key: "D", text: "Tightly coupled systems tend to be used for parallel work, while loosely coupled systems tend to support distributed work, but this is not an absolute rule" }
+        ],
+        answer: "D",
+        explanation: "هذا هو التوصيف الحرفي المذكور في المحاضرة بشأن مرونة تصنيف الأنظمة المترابطة ورخوة الترابط."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Parallel vs Concurrent",
+        concept: "التوازي (Parallelism) يتطلب التنفيذ في نفس اللحظة الفيزيائية فعلياً، بينما التزامن (Concurrency) يعني تداخل الفترات الزمنية للتنفيذ حتى على معالج واحد.",
+        question: "54. Which statement best distinguishes parallel computing from concurrent computing?",
+        options: [
+          { key: "A", text: "Parallelism requires tasks to execute simultaneously; concurrency requires their execution periods to overlap" },
+          { key: "B", text: "Concurrency always requires multiple processors, while parallelism can occur only on one processor" },
+          { key: "C", text: "They are identical terms and have no practical distinction" },
+          { key: "D", text: "Parallelism means tasks take turns, while concurrency means they execute at exactly the same instant" }
+        ],
+        answer: "A",
+        explanation: "التوازي ينفذ المهام في نفس اللحظة الزمنية بالضبط، بينما التزامن يتطلب فقط تداخل فترات التنفيذ (Overlapping time periods)."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Single Core Time-Sharing",
+        concept: "تبديل المعالج الأحادي بسرعة بين المهام (Multitasking / Time-sharing) يمثل تزامناً بدون توازي (Concurrency without parallelism).",
+        question: "55. A single-core operating system rapidly switches between several tasks, so their execution periods overlap even though only one task executes at a time. This is an example of:",
+        options: [
+          { key: "A", text: "Parallelism without concurrency" },
+          { key: "B", text: "Neither parallelism nor concurrency" },
+          { key: "C", text: "Concurrency without parallelism" },
+          { key: "D", text: "Only distributed memory" }
+        ],
+        answer: "C",
+        explanation: "على معالج أحادي النواة، تتداخل فترات تنفيذ المهام (Concurrency) لكن لا يتم تنفيذ مهمتين في نفس اللحظة الفيزيائية (Without parallelism)."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Need for Parallelism",
+        concept: "أصبح التوازي ضرورياً وحتمياً بسبب القيود الفيزيائية على زيادة تردد المعالج (Frequency scaling limits) وارتفاع الحرارة واستهلاك الطاقة.",
+        question: "56. Which of the following is identified in the lecture as a reason for the increased importance of parallel computing?",
+        options: [
+          { key: "A", text: "The elimination of all communication overhead" },
+          { key: "B", text: "Physical constraints on increasing processor frequency, together with power consumption and heat" },
+          { key: "C", text: "The fact that sequential algorithms cannot solve large problems" },
+          { key: "D", text: "The disappearance of multi-core processors" }
+        ],
+        answer: "B",
+        explanation: "المحاضرة تنص على أن عوائق تردد المعالجات والحرارة واستهلاك الطاقة جعلت التوازي والمعالجات متعددة الأنوية هي المسار الإجباري."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Centralized Architecture",
+        concept: "الأنظمة المركزية تعتمد على سيرفر رئيسي واحد يقدم كافة الخدمات للعملاء المتصلين به مباشرة.",
+        question: "57. A centralized system typically relies on:",
+        options: [
+          { key: "A", text: "Many independent nodes making all decisions locally" },
+          { key: "B", text: "No central point of service or control" },
+          { key: "C", text: "A global clock shared by all nodes" },
+          { key: "D", text: "A central server that provides services to clients" }
+        ],
+        answer: "D",
+        explanation: "النظام المركزي يعتمد بطبيعته على معمارية خادم/عميل حيث يتولى خادم مركزي واحد تلبية واستقبال كافة طلبات العملاء."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Centralized Bottlenecks",
+        concept: "نقطة الضعف القاتلة للنظام المركزي هي أن السيرفر يمثل عنق زجاجة (Bottleneck) ونقطة فشل منفردة تعطل المنظومة بالكامل إن سقطت.",
+        question: "58. What is a major potential weakness of a centralized client/server architecture?",
+        options: [
+          { key: "A", text: "The central server can become a bottleneck or a target whose failure disrupts service" },
+          { key: "B", text: "It cannot support any form of resource sharing" },
+          { key: "C", text: "It always requires every client to store a complete copy of the database" },
+          { key: "D", text: "It cannot be scaled vertically" }
+        ],
+        answer: "A",
+        explanation: "السيرفر المركزي قد يتعرض للاختناق عند تزايد الطلبات، وانهياره يؤدي إلى توقف الخدمة عن جميع العملاء."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Decentralized Systems",
+        concept: "في الأنظمة اللامركزية (Decentralized)، تتخذ العُقد قراراتها محلياً دون الرجوع إلى كيان أو سيرفر مركزي موحد.",
+        question: "59. Which characteristic most directly describes a decentralized system?",
+        options: [
+          { key: "A", text: "All decisions must be approved by one central server" },
+          { key: "B", text: "Every node must have identical hardware" },
+          { key: "C", text: "Multiple nodes can make local decisions without relying on one central entity" },
+          { key: "D", text: "The system must use a single global clock" }
+        ],
+        answer: "C",
+        explanation: "اللامركزية تعني: 'every node makes its own decision; there is no single entity that receives and responds to the request'."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Location Transparency",
+        concept: "عدم دراية المستخدم بالجهاز أو السيرفر الذي يخزن الملف فيزيائياً يمثل شفافية الموقع (Location Transparency).",
+        question: "60. A user accesses a file without needing to know which machine physically stores it. Which transparency is being provided?",
+        options: [
+          { key: "A", text: "Replication transparency" },
+          { key: "B", text: "Location transparency" },
+          { key: "C", text: "Failure transparency" },
+          { key: "D", text: "Concurrency transparency" }
+        ],
+        answer: "B",
+        explanation: "Location Transparency: Users cannot tell where hardware and software resources are located."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Migration Transparency",
+        concept: "نقل ملف أو مورد لسيرفر آخر مع استمرار التطبيقات في استخدامه بنفس الاسم ودون ملاحظة النقل هو شفافية التنقل (Migration Transparency).",
+        question: "61. A distributed file service moves a file to another server, but applications continue using it without being aware of the move. This is an example of:",
+        options: [
+          { key: "A", text: "Access transparency" },
+          { key: "B", text: "Scaling transparency" },
+          { key: "C", text: "Performance transparency" },
+          { key: "D", text: "Migration transparency" }
+        ],
+        answer: "D",
+        explanation: "Migration Transparency تتيح نقل المورد من خادم لآخر دون أن يتغير اسمه أو يتأثر العميل."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Replication Transparency",
+        concept: "حفظ عدة نسخ مكررة من الملف واختيار النسخة الأقرب للعميل تلقائياً دون إشعاره بوجود نسخ هو شفافية التكرار (Replication Transparency).",
+        question: "62. Several copies of a file are maintained, and the system silently selects a nearby copy for a request. This illustrates:",
+        options: [
+          { key: "A", text: "Replication transparency" },
+          { key: "B", text: "Failure transparency" },
+          { key: "C", text: "Concurrency transparency" },
+          { key: "D", text: "Access transparency" }
+        ],
+        answer: "A",
+        explanation: "Replication Transparency: The system is free to make additional copies of files without the users noticing."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Concurrency Transparency",
+        concept: "تزامن وصول مستخدمين لنفس المتغير أو الملف دون حدوث تضارب ودون إحساس أحدهما بالآخر يمثل شفافية التزامن (Concurrency Transparency).",
+        question: "63. Two users update the same shared resource, but the system hides the fact that both are accessing it concurrently. Which transparency is intended?",
+        options: [
+          { key: "A", text: "Location transparency" },
+          { key: "B", text: "Migration transparency" },
+          { key: "C", text: "Concurrency transparency" },
+          { key: "D", text: "Scaling transparency" }
+        ],
+        answer: "C",
+        explanation: "Concurrency Transparency: The users will not notice the existence of other users in the system accessing the same resource."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Failure Transparency",
+        concept: "إكمال التطبيق لمهمته بنجاح رغم تعطل أحد المكونات الوسيطة في النظام هو تطبيق لشفافية الأعطال (Failure Transparency).",
+        question: "64. An application continues completing its task even when one component of the distributed system fails. This is most closely related to:",
+        options: [
+          { key: "A", text: "Performance transparency" },
+          { key: "B", text: "Failure transparency" },
+          { key: "C", text: "Access transparency" },
+          { key: "D", text: "Replication transparency" }
+        ],
+        answer: "B",
+        explanation: "Failure Transparency تخفي الأعطال وتمكن التطبيقات من إكمال مهامها رغم تعطل أجزاء من النظام."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Scaling Transparency",
+        concept: "توسع التطبيق لاستيعاب أعداد متزايدة من المستخدمين دون الحاجة لإعادة كتابة كود الخوارزميات أو هيكلة النظام يمثل شفافية التوسع (Scaling Transparency).",
+        question: "65. A distributed application can grow to support more users and resources without requiring changes to its structure or algorithms. This is:",
+        options: [
+          { key: "A", text: "Location transparency" },
+          { key: "B", text: "Concurrency transparency" },
+          { key: "C", text: "Migration transparency" },
+          { key: "D", text: "Scaling transparency" }
+        ],
+        answer: "D",
+        explanation: "Scaling Transparency: Allows the system and applications to expand in scale without change to the system structure or algorithms."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Design Concerns",
+        concept: "الشبكات بطبيعتها الفيزيائية تعاني دوماً من زمن تأخير في الاتصال، ولذا فإن 'انعدام زمن التأخير تماماً' (Zero delay) مستحيل وليس من خصائص النظام الموزع.",
+        question: "66. Which option is NOT listed as a general characteristic or design concern of distributed systems in the lecture?",
+        options: [
+          { key: "A", text: "Heterogeneity" },
+          { key: "B", text: "Middleware" },
+          { key: "C", text: "A guaranteed zero communication delay" },
+          { key: "D", text: "Fault tolerance" }
+        ],
+        answer: "C",
+        explanation: "لا يمكن لأي نظام موزع ضمان زمن تأخير يساوي صفراً؛ فشبكات الاتصال تفرض دائماً تأخيراً في انتقال الحزم."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Resource Sharing Rationale",
+        concept: "الفائدة الأساسية لمشاركة الموارد هي السماح للمستخدمين بالوصول للبيانات والأجهزة الموجودة على سيرفرات وأجهزة بعيدة عبر الشبكة.",
+        question: "67. Why can distributed systems be useful for resource sharing?",
+        options: [
+          { key: "A", text: "They allow users and applications to access resources located on different machines" },
+          { key: "B", text: "They require every resource to be physically moved to one central computer" },
+          { key: "C", text: "They prevent concurrent access to shared resources" },
+          { key: "D", text: "They remove the need for communication between computers" }
+        ],
+        answer: "A",
+        explanation: "مشاركة الموارد تعني قدرة البرامج والعملاء على الوصول لأي عتاد أو بيانات على أي جهاز في الشبكة."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Speedup Calculation",
+        concept: "قانون التسريع: S = Ts / Tp. بقسمة زمن التنفيذ التسلسلي (12 ثانية) على زمن التنفيذ المتوازي (3 ثوانٍ) نحصل على: 12 / 3 = 4.",
+        question: "68. A sequential program takes 12 seconds, while its parallel version takes 3 seconds. What is the speedup?",
+        options: [
+          { key: "A", text: "3" },
+          { key: "B", text: "4" },
+          { key: "C", text: "9" },
+          { key: "D", text: "15" }
+        ],
+        answer: "B",
+        explanation: "Speedup = Ts / Tp = 12 / 3 = 4."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Efficiency Calculation",
+        concept: "قانون الكفاءة: E = Speedup / N. بقسمة التسريع (6) على عدد المعالجات (8): 6 / 8 = 0.75 = 75%.",
+        question: "69. A parallel algorithm achieves a speedup of 6 using 8 processors. What is its efficiency?",
+        options: [
+          { key: "A", text: "48%" },
+          { key: "B", text: "60%" },
+          { key: "C", text: "66.7%" },
+          { key: "D", text: "75%" }
+        ],
+        answer: "D",
+        explanation: "Efficiency = SN / N = 6 / 8 = 0.75 = 75%."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Linear Speedup",
+        concept: "التسريع الخطي المثالي باستخدام N معالجات يعني تسريعاً قدره N وكفاءة استغلال كاملة تساوي 100%.",
+        question: "70. An ideal linear speedup using 10 processors would mean:",
+        options: [
+          { key: "A", text: "A speedup of 10 and an efficiency of 100%" },
+          { key: "B", text: "A speedup of 5 and an efficiency of 50%" },
+          { key: "C", text: "A speedup of 1 and an efficiency of 10%" },
+          { key: "D", text: "A speedup greater than 10 in every case" }
+        ],
+        answer: "A",
+        explanation: "التسريع الخطي المثالي يعني SN = N = 10، وبالتالي الكفاءة EN = 10 / 10 = 1 = 100%."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Amdahl's Law: F Parameter",
+        concept: "في قانون أمداهل، يمثل الرمز F نسبة الجزء من الحسابات الذي يجب أن يظل تسلسلياً (Sequential Fraction) ولا يمكن توازيه.",
+        question: "71. In Amdahl's Law, F represents:",
+        options: [
+          { key: "A", text: "The fraction of work assigned to the fastest processor" },
+          { key: "B", text: "The number of processors that are available" },
+          { key: "C", text: "The fraction of the calculation that must remain sequential" },
+          { key: "D", text: "The fraction of time spent communicating only" }
+        ],
+        answer: "C",
+        explanation: "F في قانون أمداهل هو الجزء الإجباري التسلسلي: 'F is the fraction of a calculation that is sequential'."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Amdahl's Law Calculation",
+        concept: "قانون أمداهل: Speedup = 1 / [F + (1-F)/P]. هنا F=0.2 و P=4: فيكون 1 / [0.2 + 0.8/4] = 1 / [0.2 + 0.2] = 1 / 0.4 = 2.50.",
+        question: "72. A program has a sequential fraction of 20% and a parallelizable fraction of 80%. Using 4 processors, what is the theoretical maximum speedup according to Amdahl's Law?",
+        options: [
+          { key: "A", text: "2.00" },
+          { key: "B", text: "2.50" },
+          { key: "C", text: "3.20" },
+          { key: "D", text: "4.00" }
+        ],
+        answer: "B",
+        explanation: "Max Speedup = 1 / (F + (1-F)/P) = 1 / (0.2 + 0.8/4) = 1 / (0.2 + 0.2) = 1 / 0.4 = 2.5."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Amdahl's Bottleneck",
+        concept: "مهما زدنا عدد المعالجات، فإن الجزء التسلسلي F يضع حداً أقصى مطلقاً للتسريع (1/F) لا يمكن تجاوزه، مما يسبب تناقص العائد الإضافي.",
+        question: "73. Why does adding more processors produce diminishing returns when a program contains a sequential portion?",
+        options: [
+          { key: "A", text: "The sequential portion becomes faster automatically" },
+          { key: "B", text: "The number of processors reduces the total workload to zero" },
+          { key: "C", text: "Communication overhead is always eliminated" },
+          { key: "D", text: "The sequential portion limits the maximum achievable speedup" }
+        ],
+        answer: "D",
+        explanation: "الجزء التسلسلي يمثل عنق زجاجة يحكم أقصى تسريع ممكن مهما كان عدد المعالجات المضافة (Bottleneck)."
+      },
+      {
+        lecture: "LEC3",
+        topic: "Load Balancing",
+        concept: "إذا كُلف معالج بعمل أثقل بكثير من زملائه، فإن سرعة النظام تتحدد بأبطأ معالج، وهو خلل في توازن الحمل (Load Balancing).",
+        question: "74. A parallel program runs slowly because one processor receives much more work than the others. Which speedup-limiting factor is most directly involved?",
+        options: [
+          { key: "A", text: "Load balancing" },
+          { key: "B", text: "Location transparency" },
+          { key: "C", text: "Logical memory sharing" },
+          { key: "D", text: "Vertical scaling" }
+        ],
+        answer: "A",
+        explanation: "المحاضرة توضح: السرعة محكومة بأبطأ معالج، ولذا يجب توزيع العمل بالتساوي لتحقيق الـ Load Balancing."
+      },
+
+      // ==========================================
+      // SECTION 4: LECTURE 4 (25 Questions from lec 4 exam.pdf)
+      // ==========================================
+      {
+        lecture: "LEC4",
+        topic: "IPC Importance",
+        concept: "الفرق الأساسي الأهم بين المعالج الأحادي والنظام الموزع هو التخاطب بين العمليات (IPC)؛ لعدم وجود ذاكرة مشتركة في النظام الموزع.",
+        question: "75. What is the most important difference between a distributed system and a uniprocessor system?",
+        options: [
+          { key: "A", text: "CPU speed" },
+          { key: "B", text: "Interprocess communication" },
+          { key: "C", text: "Memory size" },
+          { key: "D", text: "Operating system type" }
+        ],
+        answer: "B",
+        explanation: "سلايد 4 نصاً: 'The single most important difference between a distributed system and a uniprocessor system is the interprocess communication'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Message Passing Rule",
+        concept: "في الأنظمة الموزعة تنعدم الذاكرة المشتركة تماماً، وبالتالي تعتمد كل عمليات الاتصال والتخاطب على تبادل الرسائل (Message Passing).",
+        question: "76. How does communication primarily occur in distributed systems?",
+        options: [
+          { key: "A", text: "Shared variables" },
+          { key: "B", text: "Global memory" },
+          { key: "C", text: "Direct register access" },
+          { key: "D", text: "Message passing" }
+        ],
+        answer: "D",
+        explanation: "نص المحاضرة: 'All communication in distributed system is based on message passing'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Shared Memory Communication",
+        concept: "في نظام الذاكرة المشتركة، يتخاطب المعالجان عندما يكتب الأول في عنوان بالذاكرة المشتركة ويقرأ الثاني من نفس العنوان.",
+        question: "77. In a shared memory system, processors communicate by:",
+        options: [
+          { key: "A", text: "Writing and reading data from a global memory space" },
+          { key: "B", text: "Sending packets through the Internet only" },
+          { key: "C", text: "Using separate files" },
+          { key: "D", text: "Accessing each other's registers" }
+        ],
+        answer: "A",
+        explanation: "المعالج x يكتب القيمة في الذاكرة المشتركة، والمعالج y يقرؤها من نفس العنوان."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Shared Variable Race",
+        concept: "إذا قرأ معالجان القيمة x=0 معاً قبل أن يكتب أحدهما، فسيضيف كلاهما 1 ويكتبان 1، فتضيع إحدى الإضافات وتصبح النتيجة 1 بدلاً من 2.",
+        question: "78. Two processors simultaneously execute x=x+1, starting with x=0. Both read the initial value before either writes. What is the final value?",
+        options: [
+          { key: "A", text: "0" },
+          { key: "B", text: "2" },
+          { key: "C", text: "1" },
+          { key: "D", text: "3" }
+        ],
+        answer: "C",
+        explanation: "بما أن P2 قرأ 0 قبل تحديث P1، فإن كلاً منهما يكتب 1 في النهاية بسبب الـ Race condition."
+      },
+      {
+        lecture: "LEC4",
+        topic: "CREW Model",
+        concept: "معمارية CREW تسمح لعدة معالجات بالقراءة المتزامنة في نفس الوقت، لكنها تمنع الكتابة المتزامنة في نفس العنوان (Concurrent Read, Exclusive Write).",
+        question: "79. Which shared memory model allows multiple processors to read the same location simultaneously but prevents simultaneous writes?",
+        options: [
+          { key: "A", text: "EREW" },
+          { key: "B", text: "CREW" },
+          { key: "C", text: "ERCW" },
+          { key: "D", text: "CRCW" }
+        ],
+        answer: "B",
+        explanation: "CREW = Concurrent Read, Exclusive Write."
+      },
+      {
+        lecture: "LEC4",
+        topic: "EREW Model",
+        concept: "النموذج الأكثر تشدداً الذي يمنع كلاً من القراءة المتزامنة والكتابة المتزامنة في نفس العنوان هو: EREW (Exclusive Read, Exclusive Write).",
+        question: "80. Which shared memory model allows neither concurrent reading nor concurrent writing to the same memory location?",
+        options: [
+          { key: "A", text: "EREW" },
+          { key: "B", text: "CREW" },
+          { key: "C", text: "CRCW" },
+          { key: "D", text: "ERCW" }
+        ],
+        answer: "A",
+        explanation: "EREW: No 2 processors are allowed to simultaneously read from or write into the same location."
+      },
+      {
+        lecture: "LEC4",
+        topic: "CRCW Model",
+        concept: "معمارية CRCW تعني (Concurrent Read, Concurrent Write) حيث يُسمح بالوصول المتزامن للقراءة وللكتابة في نفس الوقت.",
+        question: "81. In CRCW shared memory computers:",
+        options: [
+          { key: "A", text: "Only one processor can read or write" },
+          { key: "B", text: "Multiple processors can read, but only one can write" },
+          { key: "C", text: "Multiple processors can write, but only one can read" },
+          { key: "D", text: "Multiple processors can read and write simultaneously" }
+        ],
+        answer: "D",
+        explanation: "CRCW: Both multiple read and multiple write privileges are allowed."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Write Conflict Resolution",
+        concept: "حل تضارب الكتابة في CRCW يتطلب سياسة واضحة (أولوية، أو قيم متطابقة، أو مجموع/متوسط)، ولا يجوز ترك المعالجات تكتب قيماً مختلفة بلا بروتوكول.",
+        question: "82. Which of the following is NOT a method for resolving concurrent write conflicts?",
+        options: [
+          { key: "A", text: "Assigning priorities to processors" },
+          { key: "B", text: "Storing the maximum or minimum value" },
+          { key: "C", text: "Allowing all processors to write different values without any conflict resolution" },
+          { key: "D", text: "Storing the sum or average of values" }
+        ],
+        answer: "C",
+        explanation: "السماح بالقيم المختلفة دون حل للنزاع يؤدي إلى تلف وفوضى في البيانات (Non-determinism)."
+      },
+      {
+        lecture: "LEC4",
+        topic: "CRCW Search Complexity",
+        concept: "في خوارزمية البحث بـ CRCW، تأخذ خطوة القراءة O(1) وخطوة الكتابة O(1)، ويحكم التعقيد الإجمالي خطوة البحث المتوازي وهي O(m/N).",
+        question: "83. In the parallel search algorithm using CRCW shared memory, what is the overall time complexity?",
+        options: [
+          { key: "A", text: "O(N)" },
+          { key: "B", text: "O(m/N)" },
+          { key: "C", text: "O(N + m)" },
+          { key: "D", text: "O(m)" }
+        ],
+        answer: "B",
+        explanation: "سلايد 13: في CRCW الخطوة 1 والخطوة 3 تأخذان constant time، فيكون الإجمالي O(m/N)."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Exclusive Read Constraint",
+        concept: "النماذج التي تمنع القراءة المتزامنة (EREW و ERCW) تجبر المعالجات على قراءة المتغير x بالتتابع، مما يرفع زمن الخطوة الأولى إلى O(N).",
+        question: "84. In the parallel search algorithm, which shared memory models require O(N) time for Step 1 because processors cannot read the same location simultaneously?",
+        options: [
+          { key: "A", text: "CREW and CRCW" },
+          { key: "B", text: "CRCW and CREW" },
+          { key: "C", text: "CREW and ERCW" },
+          { key: "D", text: "EREW and ERCW" }
+        ],
+        answer: "D",
+        explanation: "النماذج التي تبدأ بـ ER (Exclusive Read) وهي EREW و ERCW تحتاج O(N) لقراءة العنصر x."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Shared Sum Lock",
+        concept: "القفل (Lock) إجباري عند تحديث المتغير المشترك (Global_sum) لضمان الوصول الاستئثاري المتبادل (Mutual Exclusion) ومنع تداخل المعالجات.",
+        question: "85. When calculating the sum of m numbers using N processors and shared memory, why is a LOCK required?",
+        options: [
+          { key: "A", text: "To increase the number of processors" },
+          { key: "B", text: "To prevent processors from accessing local memory" },
+          { key: "C", text: "To ensure mutually exclusive access to the global sum" },
+          { key: "D", text: "To reduce the number of additions" }
+        ],
+        answer: "C",
+        explanation: "نص المحاضرة: 'each processor must have mutually exclusive access to it otherwise the final answer will be incorrect'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Shared Sum Complexity",
+        concept: "معادلة تعقيد جمع m أعداد بـ N معالجات بالذاكرة المشتركة هي O((m/N) + N) + S، حيث S هو زمن التزامن.",
+        question: "86. What is the time complexity of summing m numbers using shared memory with N processors, according to the lecture?",
+        options: [
+          { key: "A", text: "O((m/N) + N) + S" },
+          { key: "B", text: "O(m * N)" },
+          { key: "C", text: "O(m + N^2)" },
+          { key: "D", text: "O(log N)" }
+        ],
+        answer: "A",
+        explanation: "سلايد 15: التعقيد الزمني هو O((m/N) + N) + S."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Private Memory Architecture",
+        concept: "في أنظمة الذاكرة الموزعة، يمتلك كل معالج ذاكرة محلية خاصة (Private / Local memory) ولا توجد ذاكرة عالمية مشتركة.",
+        question: "87. In distributed microprocessor memory systems:",
+        options: [
+          { key: "A", text: "All processors share one global memory" },
+          { key: "B", text: "Every processor has its own private memory" },
+          { key: "C", text: "Processors cannot communicate" },
+          { key: "D", text: "All data must be stored on one central server" }
+        ],
+        answer: "B",
+        explanation: "سلايد 18: 'each processor has its own private (local) memory and there is no global, shared memory'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Message Passing Operations",
+        concept: "تبادل الرسائل هو تمرير صريح للبيانات بين الأجهزة عبر الشبكة بواسطة دوال الإرسال والاستقبال (Send and Receive).",
+        question: "88. What is message passing?",
+        options: [
+          { key: "A", text: "Sharing variables between processors" },
+          { key: "B", text: "Accessing the same memory location" },
+          { key: "C", text: "Executing instructions on a single processor" },
+          { key: "D", text: "Explicitly sending data between processors using send and receive operations" }
+        ],
+        answer: "D",
+        explanation: "نص المحاضرة: تمرير البيانات يتم صراحة باستخدام أوامر الاتصال send و receive."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Server Definition",
+        concept: "الخادم (Server) هو برنامج يعمل على جهاز شبكي يستقبل الطلبات من العملاء، وينفذ الخدمة المطلوبة، ويرد بالنتائج.",
+        question: "89. In the Client/Server model, a server is:",
+        options: [
+          { key: "A", text: "A process that requests services from other processes only" },
+          { key: "B", text: "A computer that cannot communicate with other computers" },
+          { key: "C", text: "A process that accepts requests and provides services" },
+          { key: "D", text: "A process that always runs on the client machine" }
+        ],
+        answer: "C",
+        explanation: "الخادم هو عملية تستقبل الطلبات وتقدم الخدمات وترد على العملاء: 'accepts requests from other processes to perform a service and responds'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Client/Server Vulnerability",
+        concept: "العيب الأكبر في Client/Server هو الاعتماد الكامل على السيرفر المركزي (Dependency on Central Server)، وسقوطه يعطل الخدمة.",
+        question: "90. Which of the following is a major disadvantage of the Client/Server model?",
+        options: [
+          { key: "A", text: "Dependency on a central server" },
+          { key: "B", text: "No resource sharing" },
+          { key: "C", text: "Every computer must provide services equally" },
+          { key: "D", text: "No communication between clients and servers" }
+        ],
+        answer: "A",
+        explanation: "سلايد 24: 'Dependency on Central Server: which can cause problems if the server goes down or becomes overloaded'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "P2P Motivation",
+        concept: "شبكات الند للند (P2P) جاءت لاستغلال إمكانيات أجهزة المستخدمين الكبيرة وتوزيع أعباء الحوسبة والاتصال لتفادي اختناق السيرفر.",
+        question: "91. What is the main motivation behind using Peer-to-Peer architecture?",
+        options: [
+          { key: "A", text: "To centralize all services on one server" },
+          { key: "B", text: "To eliminate communication between computers" },
+          { key: "C", text: "To reduce the number of participating computers" },
+          { key: "D", text: "To distribute resources and computing loads among participating computers" }
+        ],
+        answer: "D",
+        explanation: "الدافع لـ P2P هو توزيع الموارد وأحمال الحوسبة والاتصال على عدد ضخم من الحواسيب المشاركة."
+      },
+      {
+        lecture: "LEC4",
+        topic: "P2P Equality",
+        concept: "في نموذج الند للند (P2P)، تتساوى جميع العُقد وتتعاون كأنداد (Peers) متكافئة دون فصل بين دور الخادم والعميل.",
+        question: "92. Which statement correctly describes the Peer-to-Peer model?",
+        options: [
+          { key: "A", text: "Every process has a fixed client role" },
+          { key: "B", text: "All processes play similar roles and cooperate as peers" },
+          { key: "C", text: "Only one computer can provide services" },
+          { key: "D", text: "All resources must be stored on a central server" }
+        ],
+        answer: "B",
+        explanation: "سلايد 25: 'All the processes play similar roles, interacting cooperatively as peers, without difference between server and client'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Napster Directory",
+        concept: "في نابستر، السيرفر لا يخزن الملفات الصوتية، بل يحتفظ فقط بفهرس يحتوي على (Filename, IP address, Port number).",
+        question: "93. In Napster, what information does the server maintain?",
+        options: [
+          { key: "A", text: "The actual music files" },
+          { key: "B", text: "Only the usernames of clients" },
+          { key: "C", text: "Filename, IP address, and port number" },
+          { key: "D", text: "Complete copies of all shared files" }
+        ],
+        answer: "C",
+        explanation: "سلايد 30: 'Server maintains list of <filename, ip_address, portnum> tuples'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Gnutella Flooding",
+        concept: "نظام نوتيلا (Gnutella) لا يعتمد على خادم مركزي، بل يبحث عن الملفات بطريقة طوفان الاستعلام (Query Flooding) بين الجيران.",
+        question: "94. How does Gnutella perform file searches?",
+        options: [
+          { key: "A", text: "Query flooding" },
+          { key: "B", text: "Centralized directory searching" },
+          { key: "C", text: "Searching only one super node" },
+          { key: "D", text: "Direct communication with a central server" }
+        ],
+        answer: "A",
+        explanation: "سلايد 33: 'Gnutella is P2P system based on query flooding'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Kazaa Supernodes",
+        concept: "كازا (Kazaa) اعتمد على أجهزة سريعة كعُقد فائقة (Supernodes) واستخدم الطوفان الانتقائي (Selective flooding) للبحث.",
+        question: "95. Which P2P system uses selective flooding of queries through super nodes?",
+        options: [
+          { key: "A", text: "Napster" },
+          { key: "B", text: "Gnutella" },
+          { key: "C", text: "DNS" },
+          { key: "D", text: "Kazaa" }
+        ],
+        answer: "D",
+        explanation: "سلايد 36: 'Kazaa is a P2P system that uses Selective flooding of queries' عبر الـ Supernodes."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Partitioning vs Replication",
+        concept: "التقسيم (Partitioning) يوزع أجزاء مختلفة من البيانات والمهام، بينما التكرار (Replication) ينشئ نسخاً مطابقة لنفس البيانات.",
+        question: "96. What is the main difference between partitioning and replication in multiple-server architectures?",
+        options: [
+          { key: "A", text: "Partitioning copies the same data, while replication divides the data" },
+          { key: "B", text: "Partitioning distributes different tasks or data, while replication creates copies" },
+          { key: "C", text: "Both techniques always store identical copies on every server" },
+          { key: "D", text: "Replication is used only to reduce installation costs" }
+        ],
+        answer: "B",
+        explanation: "التقسيم يوزع مهام وبيانات مختلفة لتوزيع الحمل، بينما التكرار ينسخ نفس البيانات لرفع الإتاحة وتحمل الأعطال."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Replication Benefits",
+        concept: "تكرار البيانات والخدمات (Replication) يرفع من درجة الإتاحة (Availability) وتحمل الأعطال (Fault tolerance) ويمنع الاختناق.",
+        question: "97. Which of the following is a major benefit of replication?",
+        options: [
+          { key: "A", text: "Eliminating the need for communication" },
+          { key: "B", text: "Reducing the number of servers" },
+          { key: "C", text: "Improving availability and fault tolerance" },
+          { key: "D", text: "Preventing all data updates" }
+        ],
+        answer: "C",
+        explanation: "سلايد 39: تحت فوائد الـ Replicate: 'Achieves availability and fault tolerance'."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Proxy Server Purpose",
+        concept: "خادم البروكسي (Proxy Server) يخزن كاش مشترك لتسريع التصفح وتخفيف الحمل عن شبكات WAN وسيرفرات الويب.",
+        question: "98. What is the primary purpose of a Web Proxy Server?",
+        options: [
+          { key: "A", text: "To increase service availability and performance by reducing the load on WAN and web servers" },
+          { key: "B", text: "To replace all client computers" },
+          { key: "C", text: "To execute all applications remotely" },
+          { key: "D", text: "To prevent clients from accessing cached data" }
+        ],
+        answer: "A",
+        explanation: "سلايد 47: هدف البروكسي هو زيادة الإتاحة والأداء عبر تقليل الحمل على شبكات WAN وخوادم الويب."
+      },
+      {
+        lecture: "LEC4",
+        topic: "Mobile Code vs Mobile Agents",
+        concept: "الكود المتنقل ينزل كوداً للعميل (كـ Applet)، بينما الوكيل المتنقل (Mobile Agent) برنامج كامل (كود وبيانات) يسافر بين أجهزة الشبكة لتنفيذ مهمة والعودة بالنتائج.",
+        question: "99. Which statement correctly describes the difference between Mobile Code and Mobile Agents?",
+        options: [
+          { key: "A", text: "Both only transfer data between servers" },
+          { key: "B", text: "Mobile code transfers complete running programs, while mobile agents transfer only files" },
+          { key: "C", text: "Mobile agents cannot access local resources" },
+          { key: "D", text: "Mobile code moves code to the user's side, while mobile agents are running programs that travel between computers carrying out tasks" }
+        ],
+        answer: "D",
+        explanation: "سلايد 48 و 50: Mobile code ينقل الكود لجهة المستخدم، بينما Mobile agent هو برنامج عامل ينتقل بين الحواسيب لتنفيذ مهام والعودة بالنتيجة."
+      },
+
+      // ==========================================
+      // SECTION 5: QUIZ B (20 Questions from Quiz B - Dr. Asmaa Aly Hagar)
+      // ==========================================
+      {
+        lecture: "QUIZB",
+        topic: "File System Models",
+        concept: "نموذج الرفع والتحميل (Upload/Download) يوفر عمليتين رئيستين فقط: قراءة الملف (تحميله) وكتابة الملف (إعادة رفعه).",
+        question: "100. The upload/download model provides which main operations?",
+        options: [
+          { key: "A", text: "Open and close" },
+          { key: "B", text: "Read file and write file" },
+          { key: "C", text: "Seek and append" },
+          { key: "D", text: "Execute and compile" }
+        ],
+        answer: "B",
+        explanation: "العمليتان الأساسيتان في نموذج الرفع والتحميل هما: Read file و Write file."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "File Modules Hierarchy",
+        concept: "وحدة الأجهزة (Device Module) هي الطبقة الدنيا الأقرب مباشرة للعتاد الفيزيائي ومحركات الأقراص.",
+        question: "101. Which module is closest to hardware?",
+        options: [
+          { key: "A", text: "File module" },
+          { key: "B", text: "Directory module" },
+          { key: "C", text: "Device module" },
+          { key: "D", text: "Access control module" }
+        ],
+        answer: "C",
+        explanation: "الـ Device module هو المكون الأدنى في معمارية نظام الملفات والأقرب للأجهزة المادية."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Replication Identifiers",
+        concept: "في المستويات الدنيا (Lower levels) يجب أن تحمل النسخ المكررة معرّفات فيزيائية مختلفة لتمييزها وتحديثها.",
+        question: "102. At lower levels, replicas must:",
+        options: [
+          { key: "A", text: "Have same name" },
+          { key: "B", text: "Be identical only" },
+          { key: "C", text: "Have different identifiers" },
+          { key: "D", text: "Be deleted" }
+        ],
+        answer: "C",
+        explanation: "في المستويات الدنيا للنظام الموزع: Replicas must have different identifiers."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Directory Mapping",
+        concept: "وحدة الدليل مسؤولة عن ترجمة وتحويل الأسماء النصية للملفات إلى معرفات الأرقام الفريدة الخاصة بها (File IDs).",
+        question: "103. The directory module is responsible for:",
+        options: [
+          { key: "A", text: "Mapping file names to file IDs" },
+          { key: "B", text: "Allocating disk blocks" },
+          { key: "C", text: "Reading file data" },
+          { key: "D", text: "Managing hardware" }
+        ],
+        answer: "A",
+        explanation: "وظيفة الدليل هي تحويل أسماء الملفات إلى المعرفات الداخلية: Mapping file names to file IDs."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Client-Initiated Validation",
+        concept: "في أسلوب التحقق المبتدأ من العميل، يتولى العميل دور الاستفسار من السيرفر للتأكد من صلاحية نسخه المخزنة مؤقتاً.",
+        question: "104. In client-initiated approach:",
+        options: [
+          { key: "A", text: "Server checks automatically" },
+          { key: "B", text: "Disk checks data" },
+          { key: "C", text: "No checking" },
+          { key: "D", text: "Client checks validity with server" }
+        ],
+        answer: "D",
+        explanation: "في الـ Client-initiated approach: العميل يبادر بالتحقق مع الخادم: Client checks validity with server."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Caching Trade-offs",
+        concept: "التخزين المؤقت (Caching) يعطي أعلى عائد وكفاءة عندما تكون عمليات الكتابة والتعديل نادرة (Infrequent writes).",
+        question: "105. Caching is best for:",
+        options: [
+          { key: "A", text: "Infrequent writes" },
+          { key: "B", text: "Frequent writes" },
+          { key: "C", text: "No access" },
+          { key: "D", text: "Only deletes" }
+        ],
+        answer: "A",
+        explanation: "الكاشينج مثالي للملفات ذات التعديل القليل والقراءة الكثيرة (Infrequent writes)."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Access Control",
+        concept: "التحكم بالوصول هدفه الأساسي التحقق من الصلاحيات لحماية وسرية وأمان الملفات (Security of files).",
+        question: "106. Access control ensures:",
+        options: [
+          { key: "A", text: "Faster CPU" },
+          { key: "B", text: "Data deletion" },
+          { key: "C", text: "Network speed" },
+          { key: "D", text: "Security of files" }
+        ],
+        answer: "D",
+        explanation: "Access control ensures Security of files."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Write-Through Disadvantage",
+        concept: "الكتابة الفورية على القرص (Write-through) تتطلب إرسال البيانات للقرص عند كل تعديل مما يسبب بطء الأداء.",
+        question: "107. Write-through disadvantage is:",
+        options: [
+          { key: "A", text: "Slow performance" },
+          { key: "B", text: "Data loss" },
+          { key: "C", text: "No reliability" },
+          { key: "D", text: "High memory" }
+        ],
+        answer: "A",
+        explanation: "عيب الكتابة الفورية (Write-through) هو بطء الأداء (Slow performance)."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "CORBA Architecture",
+        concept: "نظام كوربا (CORBA) هو بيئة وسيطة شهيرة تطبق معمارية كائنات موزعة (Distributed Object System).",
+        question: "108. CORBA is an example of:",
+        options: [
+          { key: "A", text: "File system" },
+          { key: "B", text: "Distributed object system" },
+          { key: "C", text: "Database" },
+          { key: "D", text: "Operating system" }
+        ],
+        answer: "B",
+        explanation: "CORBA is an example of a Distributed object system."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "File Operations",
+        concept: "الفتح والقراءة والكتابة عمليات وصول للملفات، بينما التصريف (Compile) هو وظيفة ترجمة خاصة بالمترجم.",
+        question: "109. Which operation is NOT related to file access?",
+        options: [
+          { key: "A", text: "Open" },
+          { key: "B", text: "Read" },
+          { key: "C", text: "Write" },
+          { key: "D", text: "Compile" }
+        ],
+        answer: "D",
+        explanation: "الـ Compile ليست عملية وصول أو تعامل مع ملف عبر نظام التشغيل."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Remote Access Location",
+        concept: "في نموذج الوصول عن بعد (Remote Access Model)، تجرى عمليات الملفات والقراءة والكتابة على السيرفر مباشرة.",
+        question: "110. In the remote access model, file operations are performed:",
+        options: [
+          { key: "A", text: "On client" },
+          { key: "B", text: "On cache" },
+          { key: "C", text: "On both equally" },
+          { key: "D", text: "On server" }
+        ],
+        answer: "D",
+        explanation: "في الـ Remote access model: العمليات تنفذ على السيرفر (On server)."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Caching Purpose",
+        concept: "الهدف الأهم لاستخدام الذاكرة المؤقتة (Caching) هو تقليل استهلاك باندويث وحركة الشبكة (Reduce network traffic).",
+        question: "111. The main purpose of caching is to:",
+        options: [
+          { key: "A", text: "Increase file size" },
+          { key: "B", text: "Delete files" },
+          { key: "C", text: "Reduce network traffic" },
+          { key: "D", text: "Increase CPU usage" }
+        ],
+        answer: "C",
+        explanation: "الكاشينج يقلل تكرار طلب البيانات عبر الشبكة، مما يقلل الـ Network traffic."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Stateless Servers",
+        concept: "الخادم عديم الحالة (Stateless Server) لا يخزن أو يحتفظ بأي معلومات عن حالة العميل بين طلباته (Keeps no client-specific state).",
+        question: "112. A stateless server:",
+        options: [
+          { key: "A", text: "Stores client information between requests" },
+          { key: "B", text: "Uses caching only" },
+          { key: "C", text: "Keeps no client-specific state" },
+          { key: "D", text: "Requires open/close operations" }
+        ],
+        answer: "C",
+        explanation: "الـ Stateless server: Keeps no client-specific state."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Directory Function",
+        concept: "الدليل يربط أسماء الملفات بالمعرفات الداخلية الثابتة الخاصة بها في النظام (Internal identifiers).",
+        question: "113. The main function of a directory is to:",
+        options: [
+          { key: "A", text: "Execute programs" },
+          { key: "B", text: "Map file names to internal identifiers" },
+          { key: "C", text: "Store CPU instructions" },
+          { key: "D", text: "Control memory" }
+        ],
+        answer: "B",
+        explanation: "وظيفة الدليل هي ربط الأسماء بالمعرفات الداخلية: Map file names to internal identifiers."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "File Architecture Components",
+        concept: "معمارية خدمة الملفات تنقسم نموذجياً إلى 3 مكونات (Flat file service, Directory service, Client module).",
+        question: "114. The file service architecture is divided into:",
+        options: [
+          { key: "A", text: "Two components" },
+          { key: "B", text: "Three components" },
+          { key: "C", text: "Four components" },
+          { key: "D", text: "Five components" }
+        ],
+        answer: "B",
+        explanation: "معمارية خدمة الملفات تتكون من 3 مكونات أساسية (Three components)."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Stateful Recovery",
+        concept: "التعافي في الخوادم ذات الحالة (Stateful) يتطلب حواراً وتواصلاً بين العميل والسيرفر لاستعادة الحالة السابقة.",
+        question: "115. Recovery in stateful servers requires:",
+        options: [
+          { key: "A", text: "No action" },
+          { key: "B", text: "Client-server communication" },
+          { key: "C", text: "Disk formatting" },
+          { key: "D", text: "Restart CPU" }
+        ],
+        answer: "B",
+        explanation: "التعافي في الـ Stateful server يتطلب تخاطب Client-server communication لإعادة بناء الحالة."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Remote Access Usage",
+        concept: "يناسب نموذج الوصول عن بعد الأجهزة عديمة الأقراص (Diskless machines) التي لا تملك مساحة لتخزين الملفات محلياً.",
+        question: "116. Remote access model is suitable for:",
+        options: [
+          { key: "A", text: "High-storage clients" },
+          { key: "B", text: "Standalone PCs" },
+          { key: "C", text: "Offline systems" },
+          { key: "D", text: "Diskless machines" }
+        ],
+        answer: "D",
+        explanation: "Remote access model يناسب الـ Diskless machines."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Initial File Request",
+        concept: "للوصول لأي ملف، يبدأ العميل أولاً بخدمة الدليل (Directory service) للبحث عن الملف ومعرفة معرّفه الرقمي.",
+        question: "117. To access a file, the client first uses:",
+        options: [
+          { key: "A", text: "Directory service" },
+          { key: "B", text: "Flat file service" },
+          { key: "C", text: "Device module" },
+          { key: "D", text: "Block module" }
+        ],
+        answer: "A",
+        explanation: "الخطوة الأولى للعميل هي الاستعانة بالـ Directory service."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Higher Level Replicas",
+        concept: "لتحقيق شفافية التكرار (Replication Transparency)، يجب أن تكون النسخ المكررة مخفية في المستويات العليا للمستخدمين.",
+        question: "118. At higher levels, replicas should:",
+        options: [
+          { key: "A", text: "Be hidden" },
+          { key: "B", text: "Be visible" },
+          { key: "C", text: "Be deleted" },
+          { key: "D", text: "Be renamed" }
+        ],
+        answer: "A",
+        explanation: "في الطبقات العليا، يجب أن تكون النسخ مخفية (Be hidden) لتحقيق الشفافية."
+      },
+      {
+        lecture: "QUIZB",
+        topic: "Delayed-Write Policy",
+        concept: "الكتابة المؤجلة (Delayed-write) تعني إجراء التعديل في الكاش أولاً بسرعة، ثم نقله لاحقاً إلى القرص الصلب.",
+        question: "119. Delayed-write means:",
+        options: [
+          { key: "A", text: "Write to cache first, later to disk" },
+          { key: "B", text: "Write only to server" },
+          { key: "C", text: "Immediate disk write" },
+          { key: "D", text: "No writing" }
+        ],
+        answer: "A",
+        explanation: "Delayed-write = Write to cache first, later to disk."
+      }
+    ];
+
+    // State Variables
+    let currentQuestionsList = [...allQuestions];
+    let currentIdx = 0;
+    let correctCount = 0;
+    let wrongCount = 0;
+    let userAnswers = new Array(currentQuestionsList.length).fill(null);
+
+    // DOM Elements
+    const lectureFilterEl = document.getElementById('lectureFilter');
+    const resetQuizBtn = document.getElementById('resetQuizBtn');
+    const currentQuestionNumEl = document.getElementById('currentQuestionNum');
+    const totalQuestionsCountEl = document.getElementById('totalQuestionsCount');
+    const correctCounterEl = document.getElementById('correctCounter');
+    const wrongCounterEl = document.getElementById('wrongCounter');
+    const progressBarFillEl = document.getElementById('progressBarFill');
+
+    const quizCardEl = document.getElementById('quizCard');
+    const summaryCardEl = document.getElementById('summaryCard');
+    const quickConceptTextEl = document.getElementById('quickConceptText');
+    const topicTagEl = document.getElementById('topicTag');
+    const questionStepLabelEl = document.getElementById('questionStepLabel');
+    const questionTextEl = document.getElementById('questionText');
+    const optionsContainerEl = document.getElementById('optionsContainer');
+
+    const explanationContainerEl = document.getElementById('explanationContainer');
+    const explanationAlertEl = document.getElementById('explanationAlert');
+    const explanationTitleEl = document.getElementById('explanationTitle');
+    const explanationTextEl = document.getElementById('explanationText');
+
+    const prevBtnEl = document.getElementById('prevBtn');
+    const nextBtnEl = document.getElementById('nextBtn');
+    const nextBtnTextEl = document.getElementById('nextBtnText');
+
+    const finalTotalEl = document.getElementById('finalTotal');
+    const finalCorrectEl = document.getElementById('finalCorrect');
+    const finalWrongEl = document.getElementById('finalWrong');
+    const finalPercentageEl = document.getElementById('finalPercentage');
+    const retryQuizBtn = document.getElementById('retryQuizBtn');
+
+    // Filter Change Event
+    lectureFilterEl.addEventListener('change', (e) => {
+      const selected = e.target.value;
+      if (selected === 'ALL') {
+        currentQuestionsList = [...allQuestions];
+      } else {
+        currentQuestionsList = allQuestions.filter(q => q.lecture === selected);
+      }
+      resetQuiz();
+    });
+
+    function updateProgress() {
+      const total = currentQuestionsList.length;
+      totalQuestionsCountEl.textContent = total;
+      currentQuestionNumEl.textContent = currentIdx + 1;
+      const progressPercent = Math.min(100, Math.round(((currentIdx + 1) / total) * 100));
+      progressBarFillEl.style.width = `${progressPercent}%`;
+    }
+
+    function renderQuestion(idx) {
+      const q = currentQuestionsList[idx];
+      const answerRecord = userAnswers[idx];
+      const isAnswered = answerRecord !== null;
+      const selectedOption = isAnswered ? answerRecord.selectedKey : null;
+
+      updateProgress();
+      questionStepLabelEl.textContent = `السؤال ${idx + 1}`;
+      topicTagEl.textContent = q.topic;
+      quickConceptTextEl.textContent = q.concept;
+      questionTextEl.textContent = q.question;
+
+      // Previous & Next state
+      prevBtnEl.disabled = (idx === 0);
+      nextBtnEl.disabled = !isAnswered;
+      nextBtnTextEl.textContent = (idx === currentQuestionsList.length - 1) ? 'عرض النتيجة النهائية' : 'السؤال التالي';
+
+      // Render Options
+      optionsContainerEl.innerHTML = '';
+      q.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = `btn-option w-full text-right p-3.5 sm:p-4 rounded-xl font-bold border flex items-center justify-between transition-all ${
+          getOptionClasses(opt.key, q.answer, selectedOption, isAnswered)
+        }`;
+        
+        btn.disabled = isAnswered;
+        btn.onclick = () => handleSelectOption(opt.key);
+
+        const textWrapper = document.createElement('div');
+        textWrapper.className = 'flex items-center gap-3 text-xs sm:text-sm w-full';
+        
+        const keyBadge = document.createElement('span');
+        keyBadge.className = 'w-7 h-7 rounded-lg bg-[#12141a] border border-[#2d3343] flex items-center justify-center font-bold text-xs text-neutral-300 mono-num shrink-0';
+        keyBadge.textContent = opt.key;
+
+        const label = document.createElement('span');
+        label.className = 'tracking-wide leading-snug font-semibold text-gray-200';
+        label.dir = 'ltr';
+        label.textContent = opt.text;
+
+        textWrapper.appendChild(keyBadge);
+        textWrapper.appendChild(label);
+        btn.appendChild(textWrapper);
+
+        if (isAnswered) {
+          if (opt.key === q.answer) {
+            const badge = document.createElement('span');
+            badge.className = 'text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-500/50 flex items-center gap-1 shrink-0';
+            badge.innerHTML = `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> صحيحة`;
+            btn.appendChild(badge);
+          } else if (opt.key === selectedOption) {
+            const badge = document.createElement('span');
+            badge.className = 'text-xs font-bold px-2 py-0.5 rounded-full bg-rose-950/80 text-rose-300 border border-rose-500/50 flex items-center gap-1 shrink-0';
+            badge.innerHTML = `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg> إجابتك`;
+            btn.appendChild(badge);
+          }
+        }
+
+        optionsContainerEl.appendChild(btn);
+      });
+
+      // Explanation Box
+      if (isAnswered) {
+        explanationContainerEl.classList.remove('hidden');
+        const isCorrect = (selectedOption === q.answer);
+        if (isCorrect) {
+          explanationAlertEl.className = 'p-3.5 sm:p-4 rounded-xl text-xs sm:text-sm leading-relaxed border bg-emerald-950/20 border-emerald-500/35 text-emerald-200';
+          explanationTitleEl.innerHTML = `<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-emerald-400">إجابة صحيحة وممتازة!</span>`;
+        } else {
+          explanationAlertEl.className = 'p-3.5 sm:p-4 rounded-xl text-xs sm:text-sm leading-relaxed border bg-rose-950/20 border-rose-500/35 text-rose-200';
+          explanationTitleEl.innerHTML = `<svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-rose-400">الشرح والتوضيح من المحاضرة:</span>`;
+        }
+        explanationTextEl.textContent = q.explanation;
+      } else {
+        explanationContainerEl.classList.add('hidden');
+      }
+    }
+
+    function getOptionClasses(key, correctKey, selectedKey, isAnswered) {
+      if (!isAnswered) {
+        return 'bg-[#222734] hover:bg-[#2b3243] border-[#2d3343] text-gray-200 hover:border-cyan-500/40';
+      }
+      if (key === correctKey) {
+        return 'bg-emerald-950/40 border-emerald-500 text-emerald-100 ring-1 ring-emerald-500/30';
+      }
+      if (key === selectedKey && selectedKey !== correctKey) {
+        return 'bg-rose-950/40 border-rose-500 text-rose-100 ring-1 ring-rose-500/30';
+      }
+      return 'bg-[#181b24] border-[#242937] text-neutral-500 opacity-60';
+    }
+
+    function handleSelectOption(key) {
+      if (userAnswers[currentIdx] !== null) return;
+      const q = currentQuestionsList[currentIdx];
+      const isCorrect = (key === q.answer);
+
+      if (isCorrect) {
+        correctCount++;
+        correctCounterEl.textContent = correctCount;
+      } else {
+        wrongCount++;
+        wrongCounterEl.textContent = wrongCount;
+      }
+
+      userAnswers[currentIdx] = {
+        selectedKey: key,
+        isCorrect: isCorrect
+      };
+
+      renderQuestion(currentIdx);
+    }
+
+    prevBtnEl.onclick = () => {
+      if (currentIdx > 0) {
+        currentIdx--;
+        renderQuestion(currentIdx);
+      }
+    };
+
+    nextBtnEl.onclick = () => {
+      if (currentIdx < currentQuestionsList.length - 1) {
+        currentIdx++;
+        renderQuestion(currentIdx);
+      } else {
+        showFinalSummary();
+      }
+    };
+
+    function showFinalSummary() {
+      quizCardEl.classList.add('hidden');
+      summaryCardEl.classList.remove('hidden');
+      finalTotalEl.textContent = currentQuestionsList.length;
+      finalCorrectEl.textContent = correctCount;
+      finalWrongEl.textContent = wrongCount;
+      const percentage = Math.round((correctCount / currentQuestionsList.length) * 100);
+      finalPercentageEl.textContent = `${percentage}%`;
+    }
+
+    function resetQuiz() {
+      currentIdx = 0;
+      correctCount = 0;
+      wrongCount = 0;
+      correctCounterEl.textContent = '0';
+      wrongCounterEl.textContent = '0';
+      userAnswers = new Array(currentQuestionsList.length).fill(null);
+      summaryCardEl.classList.add('hidden');
+      quizCardEl.classList.remove('hidden');
+      renderQuestion(currentIdx);
+    }
+
+    retryQuizBtn.onclick = resetQuiz;
+    resetQuizBtn.onclick = resetQuiz;
+
+    // Start on load
+    resetQuiz();
+  </script>
+</body></html>
