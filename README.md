@@ -1,6 +1,8 @@
-# CCE4131: Distributed Systems — Master Quiz
+# بنك أسئلة الميكروكنترولر - PIC16F877A (100 سؤال)
 
-Interactive Quiz with 119 questions covering Distributed Systems lectures.
+Microcontroller Systems Exam Prep — يشمل المحاضرات من 1 إلى 4 مع أسئلة امتحانات الميدترم السابقة 2024 و 2025.
 
-## Live Demo
-Access via GitHub Pages or clone and open `index.html` in any modern web browser.
+### المميزات المضافة:
+- 💾 **حفظ التقدم التلقائي (Auto-Save):** يحتفظ بالسؤال الذي وقفت عنده وإجاباتك السابقة تلقائياً حتى لو أغلقت المتصفح أو أعدت تحميل الصفحة.
+- ❌ **مراجعة الأخطاء (Review Mistakes):** نافذة خاصة تعرض لك كافة الأسئلة التي أخطأت فيها مع إجابتك الخاطئة، الإجابة الصحيحة، والتفسير العلمي الكامل، مع إمكانية الانتقال مباشرة لأي سؤال أو إعادة التدريب على الأسئلة الخاطئة فقط.
+- ⚡ **سريع وخفيف:** يعمل كصفحة واحدة بدون أي سيرفر أو متطلبات خارجية.
