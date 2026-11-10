@@ -3,7 +3,7 @@
 <html dir="rtl" lang="ar"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>بنك أسئلة الميكروكنترولر - PIC16F877A (100 سؤال)</title>
+<title>بنك أسئلة الميكروكنترولر - PIC16F877A (120 سؤال)</title>
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- Lucide Icons CDN -->
@@ -78,7 +78,7 @@
 <h1 class="text-lg sm:text-xl font-bold tracking-wide text-white flex items-center gap-2">
             بنك أسئلة الميكروكنترولر <span class="text-xs px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-800 en-font">PIC16F877A</span>
 </h1>
-<p class="text-xs text-gray-400">100 سؤال شامل للمحاضرات 1-4 مع أسئلة الميدترم السابقة 2024 و 2025</p>
+<p class="text-xs text-gray-400">120 سؤال شامل للمحاضرات 1-4 مع أسئلة الميدترم السابقة 2024 و 2025</p>
 </div>
 </div>
 <!-- Quick Controls -->
@@ -112,7 +112,7 @@
 </div>
 <!-- Question Counter Badge (Right) -->
 <div class="text-sm font-extrabold text-gray-200 tracking-wider en-font flex items-center gap-1">
-<span class="text-gray-400" id="total-questions-display">100</span>
+<span class="text-gray-400" id="total-questions-display">120</span>
 <span class="text-gray-600">/</span>
 <span class="text-cyan-400 text-base" id="current-question-display">1</span>
 </div>
@@ -204,7 +204,7 @@
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-lg mx-auto mb-8">
 <div class="bg-[#161f2e] border border-gray-800 p-3 rounded-xl">
 <div class="text-xs text-gray-400 mb-1">الإجمالي</div>
-<div class="text-xl font-bold text-white en-font" id="final-total">100</div>
+<div class="text-xl font-bold text-white en-font" id="final-total">120</div>
 </div>
 <div class="bg-[#064e3b]/30 border border-emerald-700/50 p-3 rounded-xl">
 <div class="text-xs text-emerald-400 mb-1">صحيح</div>
@@ -1347,11 +1347,238 @@
         question: "The default word length for data manipulated in PIC16F877 RAM and W register is 8 bits.",
         options: ["True", "False"],
         answer: 0
+      },
+
+      // === NEW ADDITIONAL 20 QUESTIONS (101 - 120) ===
+      {
+        id: 101,
+        source: "Lecture 4",
+        topic: "STATUS Register Bits",
+        concept: "البت IRP في مسجل الحالة يُستخدم لاختيار بنك الذاكرة عند استخدام العنونة غير المباشرة (Indirect Addressing) مع مسجل FSR: القيمة 0 للبنوك 0 و 1، والقيمة 1 للبنوك 2 و 3.",
+        question: "In the STATUS register, what is the role of the IRP bit?",
+        options: [
+          "It enables external interrupts on RB0",
+          "It selects the RAM bank for Indirect Addressing (0 = Banks 0,1 ; 1 = Banks 2,3)",
+          "It indicates instruction execution overflow",
+          "It resets the microcontroller when set to 1"
+        ],
+        answer: 1
+      },
+      {
+        id: 102,
+        source: "Lecture 4",
+        topic: "Indirect Addressing",
+        concept: "المسجل INDF ليس مسجلاً فيزيائياً حقيقياً، بل قراءة أو كتابة INDF تصل مباشرة للموقع الذي يشير إليه المسجل FSR (العنونة غير المباشرة).",
+        question: "Which register pair in PIC16F877 is dedicated to Indirect Addressing of the RAM?",
+        options: ["PCL and PCLATH", "FSR and INDF", "TRISA and PORTA", "OPTION_REG and STATUS"],
+        answer: 1
+      },
+      {
+        id: 103,
+        source: "Lecture 3",
+        topic: "Assembly Directives",
+        concept: "الملف المتضمن P16F877.INC يحتوي على تعريفات العناوين وأسماء المنافذ والبتات الافتراضية ليتمكن المجمع من فهم أسماء مثل PORTB و TRISB بدلاً من كتابة أرقام العناوين يدوياً.",
+        question: "The header directive 'INCLUDE \"P16F877.INC\"' is necessary in assembly programs to:",
+        options: [
+          "Double the clock frequency of the crystal",
+          "Define standard register names and bit locations for the PIC16F877",
+          "Switch the chip into 16-bit processing mode",
+          "Wipe all existing code from the program EEPROM"
+        ],
+        answer: 1
+      },
+      {
+        id: 104,
+        source: "Lecture 4",
+        topic: "Timing & Frequency",
+        concept: "إذا استخدمنا مذبذب خارجي بتردد 20 MHz، فإن تردد تنفيذ التعليمات يكون 20 / 4 = 5 MHz، وبالتالي يستغرق تنفيذ التعليمة الواحدة 1 / 5 MHz = 0.2 µs (أو 200 نانوثانية).",
+        question: "If a PIC16F877 uses a 20 MHz crystal oscillator, what is the duration of one instruction cycle?",
+        options: ["1 µs", "0.2 µs (200 ns)", "0.05 µs (50 ns)", "4 µs"],
+        answer: 1
+      },
+      {
+        id: 105,
+        source: "Lecture 2",
+        topic: "Program Counter & Reset",
+        concept: "عند عمل Reset للمتحكم، يتم تصفير عداد البرنامج (PC = 0x0000) ويبدأ المعالج من هذا العنوان، ويسمى 'Reset Vector'.",
+        question: "The memory address '0x0000' in PIC16F877 is commonly known as the:",
+        options: ["Interrupt Vector", "Reset Vector", "Stack Overflow Point", "EEPROM Start Pointer"],
+        answer: 1
+      },
+      {
+        id: 106,
+        source: "Lecture 3",
+        topic: "I/O Ports Initial State",
+        concept: "عند تشغيل المتحكم أو عمل Reset، تكون القيمة الافتراضية لجميع مسجلات TRIS هي 0xFF (جميع البتات 1)، أي أن جميع أطراف المنافذ تبدأ كمدخلات (Inputs) لحماية الدائرة.",
+        question: "Following a power-on reset, all I/O pins of the PIC16F877 default to:",
+        options: [
+          "Outputs driven HIGH (+5V)",
+          "Outputs driven LOW (Ground)",
+          "Inputs (high-impedance mode)",
+          "PWM generation mode"
+        ],
+        answer: 2
+      },
+      {
+        id: 107,
+        source: "Lecture 4",
+        topic: "Instructions",
+        concept: "التعليمة CLRF f تقوم بمسح محتويات المسجل f وجعلها 0x00، وتضع علم الصفر Z في مسجل الحالة مساوياً لـ 1، وتستغرق دورة واحدة.",
+        question: "Executing the instruction 'CLRF PORTB' results in:",
+        options: [
+          "Setting all bits of PORTB to 1 and clearing Z flag",
+          "Writing 0x00 into PORTB and setting the Zero (Z) flag to 1",
+          "Configuring PORTB as inputs",
+          "Switching to Bank 1"
+        ],
+        answer: 1
+      },
+      {
+        id: 108,
+        source: "Lecture 4",
+        topic: "Instructions",
+        concept: "التعليمة CLRW تقوم بمسح محتويات مسجل العمل W وجعلها 0x00 مع رفع علم الصفر Z إلى 1.",
+        question: "The instruction 'CLRW' clears which register?",
+        options: ["The STATUS register", "The working register W", "The Program Counter", "PORTC"],
+        answer: 1
+      },
+      {
+        id: 109,
+        source: "Lecture 1",
+        topic: "Interrupts vs Polling",
+        concept: "طريقة الاستعلام (Polling) تعتمد على فحص الحالة دورياً في حلقة تكرارية، بينما المقاطعة (Interrupt) تجعل الجهاز الخارجي ينبه المعالج فوراً فقط عند توفر البيانات.",
+        question: "Which I/O data transfer method allows an external peripheral to immediately notify the CPU without continuous CPU polling?",
+        options: ["Bit-Banging", "Interrupt method", "Static polling", "Clock division"],
+        answer: 1
+      },
+      {
+        id: 110,
+        source: "Lecture 2",
+        topic: "RAM vs EEPROM",
+        concept: "ذاكرة RAM سريعة جداً لكنها متطايرة (تضيع عند فصل الكهرباء)، بينما ذاكرة Data EEPROM تحتفظ ببياناتها بدون كهرباء ولكن كتابتها أبطأ بكثير.",
+        question: "Which on-chip memory should be used to store calibration parameters that must survive a power outage?",
+        options: ["RAM (Register File)", "Data EEPROM", "W register", "Stack"],
+        answer: 1
+      },
+      {
+        id: 111,
+        source: "Lecture 3",
+        topic: "Port Pin Count",
+        concept: "مجموع أطراف الإدخال والإخراج في المنافذ الخمسة لمتحكم PIC16F877A هو: 6 (Port A) + 8 (Port B) + 8 (Port C) + 8 (Port D) + 3 (Port E) = 33 طرف I/O.",
+        question: "What is the total number of general-purpose I/O pins available on the PIC16F877 across all 5 ports?",
+        options: ["28 pins", "33 pins", "40 pins", "32 pins"],
+        answer: 1
+      },
+      {
+        id: 112,
+        source: "Lecture 4",
+        topic: "Stack Architecture",
+        concept: "المكدس (Stack) في PIC16F877A مفصول تماماً عن الـ RAM وعن ذاكرة البرنامج، ولا يمكن قراءته أو كتابته مباشرة بواسطة تعليمات المبرمج العادية.",
+        question: "In PIC16F877, the hardware Stack used by CALL and RETURN is:",
+        options: [
+          "Part of general-purpose RAM at address 0x20",
+          "Dedicated hardware storage of 8 levels, not directly accessible via data instructions",
+          "Stored inside the Data EEPROM",
+          "Mapped into Bank 3 of the file registers"
+        ],
+        answer: 1
+      },
+      {
+        id: 113,
+        source: "Lecture 3",
+        topic: "Instructions",
+        concept: "التعليمة COMF f, d تقوم بإيجاد المكمل الأحادي (One's complement - عكس كل البتات من 0 لـ 1 والعكس) للمسجل f، وتؤثر على علم الصفر Z.",
+        question: "The instruction 'COMF TEMP, F' performs which operation?",
+        options: [
+          "Computes the two's complement of TEMP",
+          "Inverts all bits (one's complement) of TEMP",
+          "Compares TEMP with W and sets the carry flag",
+          "Clears the high nibble of TEMP"
+        ],
+        answer: 1
+      },
+      {
+        id: 114,
+        source: "Lecture 4",
+        topic: "Bank Selection Bits",
+        concept: "الأمر BCF STATUS, RP0 متبوعاً بـ BSF STATUS, RP1 يضبط البتات إلى RP1=1 و RP0=0، وهذا يحدد Bank 2.",
+        question: "What RAM bank is selected by the following sequence?\nBCF STATUS, RP0\nBSF STATUS, RP1",
+        options: ["Bank 0", "Bank 1", "Bank 2", "Bank 3"],
+        answer: 2
+      },
+      {
+        id: 115,
+        source: "Lecture 3",
+        topic: "C vs Assembly Assignment",
+        concept: "في لغة C للمتحكم، التعبير PORTC.B2 يشير إلى البت رقم 2 في المنفذ C.",
+        question: "In Embedded C programming for PIC, the expression 'PORTC.B2' refers to:",
+        options: [
+          "The upper two bits of PORTC",
+          "Bit 2 (the third physical pin) of PORTC",
+          "The direction register TRISC",
+          "A byte transfer over Bank 2"
+        ],
+        answer: 1
+      },
+      {
+        id: 116,
+        source: "Lecture 1",
+        topic: "CPU Registers",
+        concept: "مسجل MAR (Memory Address Register) يحتفظ بعنوان الذاكرة الذي يتم إرساله إلى ناقل العناوين أثناء عمليات القراءة أو الكتابة.",
+        question: "The Memory Address Register (MAR) holds the:",
+        options: [
+          "Opcode currently being decoded",
+          "Address of the memory location currently being read or written",
+          "Intermediate calculation result from the ALU",
+          "Status flags of the previous subtraction"
+        ],
+        answer: 1
+      },
+      {
+        id: 117,
+        source: "Lecture 2",
+        topic: "Harvard Architecture",
+        concept: "معمارية فون نيومان (Von Neumann) تشارك نفس الناقل ونفس الذاكرة للأوامر والبيانات، بينما معمارية هارفارد (Harvard) تفصل بين ذاكرة التعليمات وذاكرة البيانات.",
+        question: "The architecture used in PIC microcontrollers that provides separate buses and memories for instructions and data is known as:",
+        options: ["Von Neumann architecture", "Harvard architecture", "Turing architecture", "CISC multi-thread architecture"],
+        answer: 1
+      },
+      {
+        id: 118,
+        source: "Lecture 4",
+        topic: "Nested Loops Timing",
+        concept: "تداخل الحلقات (Nested Loops) يُستخدم برمجياً لتحقيق أزمنة تأخير طويلة (مثل الثواني) نظراً لأن مسجلات الـ 8-bit يمكنها العد حتى 255 فقط.",
+        question: "Why are nested loops required to create a 30-second delay in PIC assembly?",
+        options: [
+          "Because the crystal oscillator stops running after 1 millisecond",
+          "Because 8-bit registers can hold a maximum count of only 255 per single loop",
+          "Because CALL instructions are forbidden inside delays",
+          "Because the Watchdog timer forces loops to restart"
+        ],
+        answer: 1
+      },
+      {
+        id: 119,
+        source: "Lecture 3",
+        topic: "Pull-up Resistor",
+        concept: "في دائرة الأمان والمفاتيح (Reed Switches)، يتم استخدام مقاومة سحب لأعلى (Pull-up resistor) لجعل الدخل 1 افتراضياً حتى لا يترك الطرف عائماً (Floating) عند فتح المفتاح.",
+        question: "In the Security System interface circuit, the 10k Ohm resistor connected to +5V on RB0 acts as a:",
+        options: ["Current amplifier for the relay coil", "Pull-up resistor ensuring a defined logic '1' when switches open", "Frequency divider for the 4 MHz clock", "Voltage regulator dropping +5V to +3.3V"],
+        answer: 1
+      },
+      {
+        id: 120,
+        source: "Lecture 4",
+        topic: "Instructions & Flags",
+        concept: "الأمر ADDLW k يقوم بجمع قيمة ثابتة مع مسجل العمل W ويؤثر على الأعلام الثلاثة (C, DC, Z) في مسجل الحالة STATUS.",
+        question: "Which flags in the STATUS register can be affected by the arithmetic instruction 'ADDLW k'?",
+        options: ["Zero (Z) flag only", "Carry (C) flag only", "C, DC, and Z flags", "No flags are affected"],
+        answer: 2
       }
     ];
 
-    // --- Enhanced State Management & Persistence ---
-    const STORAGE_KEY = 'pic16f877a_quiz_v2_storage';
+    // --- Enhanced State Management & Persistence (v3 - 120 Questions) ---
+    const STORAGE_KEY = 'pic16f877a_quiz_v3_120q_storage';
     let questions = [...rawQuestions];
     let currentIndex = 0;
     let userAnswers = new Array(questions.length).fill(null);
@@ -1547,7 +1774,6 @@
         btn.className = `option-card w-full text-left p-3.5 sm:p-4 rounded-xl flex items-center justify-between gap-3 text-sm sm:text-base font-medium transition cursor-pointer`;
         btn.setAttribute('dir', 'ltr');
 
-        // Text & Badge styling
         let badgeLetter = q.options.length === 2 ? (idx === 0 ? 'T' : 'F') : letters[idx];
         let badgeClass = 'w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gray-800 text-gray-300 flex items-center justify-center font-bold text-xs sm:text-sm border border-gray-700 shrink-0';
 
@@ -1583,7 +1809,7 @@
     }
 
     function selectOption(index) {
-      if (userAnswers[currentIndex] !== null) return; // Prevent double select
+      if (userAnswers[currentIndex] !== null) return;
 
       userAnswers[currentIndex] = index;
       const isCorrect = index === questions[currentIndex].answer;
@@ -1782,7 +2008,6 @@
         document.getElementById('result-modal').classList.add('hidden');
         document.getElementById('quiz-container').classList.remove('hidden');
 
-        // Show banner that we are in review mode
         let reviewBanner = document.getElementById('review-mode-indicator');
         if (!reviewBanner) {
           reviewBanner = document.createElement('div');
@@ -1797,7 +2022,7 @@
             <span>أنت الآن في وضع التدريب على <b>الأسئلة الخاطئة فقط (${questions.length} سؤالاً)</b>.</span>
           </div>
           <button onclick="restartQuiz(true)" class="text-xs px-2.5 py-1 rounded bg-amber-800 hover:bg-amber-700 text-white font-bold cursor-pointer">
-            العودة للبنك الكامل (100 سؤال)
+            العودة للبنك الكامل (120 سؤال)
           </button>
         `;
         reviewBanner.classList.remove('hidden');
@@ -1808,9 +2033,8 @@
       }
     }
 
-    // --- Keyboard shortcuts for lightning study session ---
+    // --- Keyboard shortcuts ---
     document.addEventListener('keydown', (e) => {
-      // Close modal on Escape
       if (e.key === 'Escape') {
         const mistakesModal = document.getElementById('mistakes-modal');
         if (mistakesModal && !mistakesModal.classList.contains('hidden')) {
@@ -1833,7 +2057,6 @@
       }
     });
 
-    // Close modal when clicking on backdrop
     document.addEventListener('click', (e) => {
       const modal = document.getElementById('mistakes-modal');
       if (modal && !modal.classList.contains('hidden') && e.target === modal) {
@@ -1841,11 +2064,10 @@
       }
     });
 
-    // Initialize on load with smart persistence restoration
+    // Initialize on load with persistence
     window.onload = function() {
       const loaded = loadProgress();
       if (!loaded) {
-        // default fresh start
         questions = [...rawQuestions];
         currentIndex = 0;
         userAnswers = new Array(questions.length).fill(null);
